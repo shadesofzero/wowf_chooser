@@ -7,6 +7,8 @@
 #   look: <look>        +w when the race has that look
 #   novelty: true       +w on new race/class combos and new races
 # Answers may also set `filter: {faction: alliance|horde}`.
+# On multi questions, `exclusive: true` makes an answer deselect all the others.
+# Role effects don't stack: a spec scores only its best-matching chosen role.
 # `why` overrides the auto-generated reason shown in results.
 questions:
   - id: faction
@@ -28,7 +30,8 @@ questions:
 
   - id: role
     text: What do you want to do in a group?
-    type: single
+    help: Pick every role you'd be happy playing.
+    type: multi
     answers:
       - id: tank
         icon: inv_shield_06
@@ -49,24 +52,85 @@ questions:
       - id: flex
         icon: ability_druid_catform
         text: I want to be able to do a bit of everything
-        effects: [{trait: utility, w: 2}, {theme: shapeshift, w: 2}]
+        exclusive: true
+        effects: [{trait: utility, w: 2}, {theme: shapeshift, w: 1}, {theme: elements, w: 1}]
 
-  - id: theme
-    text: Which fantasies appeal to you? (pick up to 3)
-    type: multi
-    max: 3
+  # The fantasy questions are deliberately indirect: every answer leans toward
+  # two or three classes, so no single pick gives the result away.
+  - id: source
+    text: Where does your power come from?
+    type: single
     answers:
-      - {id: holy, icon: spell_holy_holybolt, text: "A champion of the Holy Light", effects: [{theme: holy, w: 3}]}
-      - {id: nature, icon: spell_nature_protectionformnature, text: "Nature, druids and the wild", effects: [{theme: nature, w: 3}]}
-      - {id: shadow, icon: spell_shadow_shadowwordpain, text: "Shadow and forbidden dark magic", effects: [{theme: shadow, w: 3}]}
-      - {id: arcane, icon: spell_fire_flamebolt, text: "Arcane scholar hurling fire and frost", effects: [{theme: arcane, w: 3}]}
-      - {id: stealth, icon: ability_stealth, text: "Stealthy assassin with poisoned blades", effects: [{theme: stealth, w: 3}]}
-      - {id: beasts, icon: ability_hunter_beasttaming, text: "A loyal animal companion", effects: [{theme: beasts, w: 3}, {trait: pet, w: 1}]}
-      - {id: elements, icon: spell_nature_stoneskintotem, text: "Commanding the elements with totems", effects: [{theme: elements, w: 3}]}
-      - {id: weapons, icon: inv_sword_27, text: "A master of weapons", effects: [{theme: weapons, w: 3}]}
-      - {id: armor, icon: inv_shield_06, text: "Clad in heavy plate with a shield", effects: [{theme: heavy_armor, w: 3}]}
-      - {id: shapeshift, icon: ability_druid_catform, text: "Shapeshifting into animals", effects: [{theme: shapeshift, w: 3}]}
-      - {id: demons, icon: spell_shadow_summonimp, text: "Enslaving demons to do my bidding", effects: [{theme: demons, w: 3}]}
+      - id: faith
+        icon: spell_holy_holybolt
+        text: Faith — something greater than me works through my hands
+        effects: [{theme: holy, w: 2}, {theme: elements, w: 1.5}]
+      - id: knowledge
+        icon: inv_misc_book_09
+        text: Knowledge — I read the books others were afraid to open
+        effects: [{theme: arcane, w: 2}, {theme: shadow, w: 1.5}, {theme: demons, w: 1}]
+      - id: land
+        icon: spell_nature_protectionformnature
+        text: The land — its spirits and creatures answer when I call
+        effects: [{theme: nature, w: 2}, {theme: elements, w: 1.5}, {theme: beasts, w: 1}]
+      - id: training
+        icon: inv_sword_27
+        text: Training — years of drills until it all became instinct
+        effects: [{theme: weapons, w: 2}, {theme: stealth, w: 1}, {theme: heavy_armor, w: 1}]
+      - id: secret
+        icon: spell_shadow_shadowwordpain
+        text: Something I'd rather not talk about
+        effects: [{theme: shadow, w: 2}, {theme: demons, w: 1}, {theme: stealth, w: 1}]
+
+  - id: scene
+    text: Which moment would you most want to live out?
+    type: single
+    answers:
+      - id: doorway
+        icon: inv_shield_06
+        text: Holding a doorway alone while the enemy pours in
+        effects: [{theme: heavy_armor, w: 2}, {theme: weapons, w: 1}, {trait: survivability, w: 0.5}]
+      - id: vanish
+        icon: ability_stealth
+        text: Being gone before anyone realizes you were there
+        effects: [{theme: stealth, w: 2}, {theme: shapeshift, w: 1}, {trait: burst, w: 0.5}]
+      - id: hunt
+        icon: ability_hunter_beasttaming
+        text: Tracking something through the wilds for days, and finally finding it
+        effects: [{theme: beasts, w: 2}, {theme: nature, w: 1}, {theme: weapons, w: 0.5}]
+      - id: unleash
+        icon: spell_fire_flamebolt
+        text: Unleashing something that should never have been unleashed
+        effects: [{theme: arcane, w: 1.5}, {theme: shadow, w: 1.5}, {theme: elements, w: 1}, {theme: demons, w: 1}]
+      - id: rescue
+        icon: spell_holy_heal
+        text: Dragging a friend back from the brink
+        effects: [{theme: holy, w: 1.5}, {theme: nature, w: 1}, {theme: elements, w: 1}]
+
+  - id: company
+    text: How do you picture yourself on the road?
+    type: single
+    answers:
+      - id: companion
+        icon: spell_shadow_summonimp
+        text: Never truly alone — something always walks beside me
+        effects: [{theme: beasts, w: 1.5}, {theme: demons, w: 1.5}, {trait: pet, w: 1}]
+      - id: adapt
+        icon: ability_druid_catform
+        text: Never the same twice — I become whatever the road demands
+        effects: [{theme: shapeshift, w: 1.5}, {theme: elements, w: 1}, {trait: utility, w: 1}]
+      - id: lone
+        icon: inv_sword_04
+        text: Just me and what I carry
+        effects: [{theme: weapons, w: 1.5}, {theme: stealth, w: 1}, {theme: heavy_armor, w: 1}]
+      - id: center
+        icon: spell_holy_prayerofhealing02
+        text: At the heart of a group that's counting on me
+        effects: [{theme: holy, w: 1.5}, {theme: elements, w: 1}, {trait: group, w: 1}]
+      - id: study
+        icon: inv_misc_book_11
+        text: Alone with my thoughts, and whatever whispers back
+        effects: [{theme: arcane, w: 1.5}, {theme: shadow, w: 1.5}]
 
   - id: complexity
     text: How much complexity do you want?

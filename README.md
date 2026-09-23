@@ -44,7 +44,7 @@ content can actually be tested (the beta is currently capped at level 20).
 
 ## How scoring works
 
-- **Specs:** role match (+w), theme match (+w), traits `w × (value − 1.5)`, viability
+- **Specs:** role match (+w, best of the chosen roles only), theme match (+w), traits `w × (value − 1.5)`, viability
   `w × (rating − 3) / 1.5`. The top 3 specs are shown, one per class.
 - **Races:** for the recommended spec, each racial whose tags overlap the spec's `racial_tags`
   adds points (actives count slightly more). Answers add further boosts for PvP, leveling, looks

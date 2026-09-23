@@ -147,6 +147,7 @@ for (const q of questions) {
     aIds.add(a.id);
     if (a.filter?.faction) checkIn(a.filter.faction, factions, aw);
     checkIcon(a.icon, aw);
+    if (a.exclusive && q.type !== 'multi') err(`${aw}: exclusive only applies to multi questions`);
     for (const e of a.effects || []) {
       if (typeof e.w !== 'number') err(`${aw}: effect missing numeric w`);
       if (e.role) checkIn(e.role, vocab.roles, aw);

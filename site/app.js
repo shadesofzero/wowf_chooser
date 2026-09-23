@@ -1,4 +1,4 @@
-import { recommend, scoreRaces, factionFilter } from './scoring.js';
+import { recommend, scoreRaces, factionFilter, chosen } from './scoring.js';
 
 const app = document.getElementById('app');
 let data;
@@ -11,6 +11,7 @@ const esc = (s) =>
 const day = (d) => String(d).slice(0, 10);
 
 // Wowhead game icons. Sizes: small (18px), medium (36px), large (56px).
+const ROLE_VERBS = { tank: 'tank', healer: 'heal', melee: 'deal melee damage', ranged: 'deal ranged damage' };
 const ROLE_ICONS = { tank: 'inv_shield_06', healer: 'spell_holy_heal', melee: 'inv_sword_04', ranged: 'ability_marksmanship' };
 const CONTENT_ICONS = { leveling: 'inv_misc_map_01', dungeons: 'inv_misc_key_03', raid: 'inv_misc_head_dragon_01', pvp: 'inv_bannerpvp_02' };
 function ico(name, cls = '', size = 'large', alt = '') {
@@ -20,7 +21,7 @@ function ico(name, cls = '', size = 'large', alt = '') {
 }
 const EXT = '<svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2 7 9M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-// ---- URL hash state: #faction=horde&theme=holy,armor&done=1 ----
+// ---- URL hash state: #faction=horde&source=faith&done=1 ----
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   answers = {};
@@ -105,9 +106,14 @@ function renderQuestion(q) {
         answers[q.id] = [id];
         return go(step + 1);
       }
-      const cur = new Set(answers[q.id] || []);
+      const exclusive = new Set(q.answers.filter((a) => a.exclusive).map((a) => a.id));
+      let cur = new Set(answers[q.id] || []);
       if (cur.has(id)) cur.delete(id);
-      else if (!q.max || cur.size < q.max) cur.add(id);
+      else {
+        // An exclusive answer clears the rest; any other answer clears exclusive ones.
+        cur = new Set(exclusive.has(id) ? [] : [...cur].filter((x) => !exclusive.has(x)));
+        if (!q.max || cur.size < q.max) cur.add(id);
+      }
       answers[q.id] = [...cur];
       writeHash();
       renderQuestion(q);
@@ -161,10 +167,25 @@ function renderResults() {
   };
 }
 
+/** Display-only notes like "Can also heal as Holy" for the other roles the player picked. */
+function otherRoleNotes(spec, alternatives) {
+  const picked = chosen(data, answers).flatMap(({ answer }) => (answer.effects || []).filter((e) => e.role).map((e) => e.role));
+  const matched = spec.roles.find((r) => picked.includes(r));
+  return [...new Set(picked)]
+    .filter((r) => r !== matched)
+    .map((r) => {
+      if (spec.roles.includes(r)) return `Can also ${ROLE_VERBS[r]} without changing spec`;
+      const specs = alternatives.map((a) => a.spec).filter((s) => s.roles.includes(r));
+      return specs.length ? `Can also ${ROLE_VERBS[r]} as ${specs.map((s) => s.name).join(' or ')}` : null;
+    })
+    .filter(Boolean);
+}
+
 function resultCard({ cls, spec, reasons, alternatives }, i) {
   const races = scoreRaces(data, answers, cls, spec).slice(0, 2);
   const { vocab } = data;
   const v = spec.viability;
+  const why = [...reasons.slice(0, 4).map((r) => r.text), ...otherRoleNotes(spec, alternatives)];
   return `
   <article class="card result" style="--cls:${esc(cls.color)}">
     <header>
@@ -184,8 +205,8 @@ function resultCard({ cls, spec, reasons, alternatives }, i) {
     <p>${esc(spec.blurb)}</p>
     <p class="muted">${esc(cls.fantasy)}</p>
 
-    ${reasons.length ? `<h3>Why it fits you</h3>
-    <ul class="why">${reasons.slice(0, 4).map((r) => `<li>${esc(r.text)}</li>`).join('')}</ul>` : ''}
+    ${why.length ? `<h3>Why it fits you</h3>
+    <ul class="why">${why.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
 
     <h3>Viability ${badge(v.confidence)}</h3>
     <dl class="viability">

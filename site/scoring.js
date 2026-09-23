@@ -32,11 +32,13 @@ export function scoreSpecs(data, answers) {
         score += value;
         if (text) reasons.push({ text, value });
       };
+      let bestRole = null; // role picks don't stack, so dual-role specs aren't favoured
       for (const { answer } of picks) {
         for (const e of answer.effects || []) {
           if (e.role) {
             const i = spec.roles.indexOf(e.role);
-            if (i >= 0) add(e.w * (i === 0 ? 1 : ROLE_SECONDARY), `Fills your chosen role: ${vocab.roles[e.role]}`);
+            const v = i < 0 ? 0 : e.w * (i === 0 ? 1 : ROLE_SECONDARY);
+            if (v > (bestRole?.v ?? 0)) bestRole = { v, text: `Fills your chosen role: ${vocab.roles[e.role]}` };
           } else if (e.theme) {
             if (spec.themes.includes(e.theme)) add(e.w, `Matches your fantasy: ${vocab.themes[e.theme]}`);
           } else if (e.trait) {
@@ -49,6 +51,7 @@ export function scoreSpecs(data, answers) {
           }
         }
       }
+      if (bestRole) add(bestRole.v, bestRole.text);
       results.push({ cls, spec, score, reasons: topReasons(reasons) });
     }
   }

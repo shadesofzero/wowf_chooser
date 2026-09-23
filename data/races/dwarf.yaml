@@ -1,0 +1,15 @@
+id: dwarf
+name: Dwarf
+looks: [short, brutish]
+blurb: Stout mountain folk of Ironforge, hardy and fond of treasure.
+variants:
+  - faction: alliance
+    classes: [warrior, paladin, hunter, rogue, priest, shaman]
+    new_combos: [shaman]
+racials:
+  - {name: Stoneform, type: active, effect: "Immunity to bleeds, poisons and diseases and reduced physical damage taken for 8 seconds.", tags: [survival, tank, pvp]}
+  - {name: Find Treasure, type: active, effect: "Track nearby treasure chests.", tags: [leveling]}
+  - {name: Mace Specialization, type: passive, effect: "Maces increase spell and ability critical strike chance by 1%.", tags: [mace]}
+  - {name: Big Game Hunter, type: passive, effect: "Damage against Beasts increased by 5%.", tags: [beasts, leveling]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

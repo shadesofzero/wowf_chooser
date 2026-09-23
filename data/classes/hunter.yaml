@@ -1,0 +1,43 @@
+id: hunter
+name: Hunter
+color: "#AAD372"
+wowhead_class_id: 3
+armor: Mail
+fantasy: >
+  A tracker and marksman who fights at range beside a loyal beast.
+  One of the fastest and easiest classes to level.
+changes:
+  - text: "Beast Mastery gets more pet-focused support; Marksmanship leans into a petless ranged identity; Survival leans melee and traps."
+    confidence: speculative
+    sources: [expcarry-changes]
+  - text: "Human Hunter is a new Alliance combination."
+    confidence: confirmed
+    sources: [blizz-create-hero]
+  - text: "Reported among the fastest classes to level (~8% faster than average)."
+    confidence: speculative
+    sources: [lfcarry-classes]
+specs:
+  - id: beast_mastery
+    name: Beast Mastery
+    roles: [ranged]
+    themes: [beasts, nature]
+    blurb: Your pet does the heavy lifting — the smoothest solo and leveling experience in the game.
+    traits: {complexity: 1, solo: 3, group: 2, pvp: 2, survivability: 2, range: 3, utility: 1, burst: 1, pet: 3, forever_new: 1}
+    viability: {leveling: 5, dungeons: 3, raid: 3, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, hit, crit, haste, leveling, beasts]
+  - id: marksmanship
+    name: Marksmanship
+    roles: [ranged]
+    themes: [weapons, beasts]
+    blurb: Precision shooter with Aimed Shot and Trueshot Aura; the group-favourite hunter.
+    traits: {complexity: 2, solo: 2, group: 3, pvp: 3, survivability: 1, range: 3, utility: 2, burst: 2, pet: 2, forever_new: 1}
+    viability: {leveling: 4, dungeons: 4, raid: 4, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, hit, crit, haste, pvp]
+  - id: survival
+    name: Survival
+    roles: [ranged, melee]
+    themes: [nature, weapons, beasts]
+    blurb: Trapper and skirmisher mixing melee, traps and ranged shots.
+    traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 2, range: 2, utility: 2, burst: 1, pet: 2, forever_new: 2}
+    viability: {leveling: 4, dungeons: 3, raid: 3, pvp: 3, confidence: speculative, sources: [classic-baseline, expcarry-changes]}
+    racial_tags: [physical, hit, crit, pvp, survival]

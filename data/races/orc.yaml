@@ -1,0 +1,15 @@
+id: orc
+name: Orc
+looks: [tall, brutish]
+blurb: Proud warriors of Durotar, freed from demonic corruption.
+variants:
+  - faction: horde
+    classes: [warrior, hunter, rogue, shaman, mage, warlock]
+    new_combos: [mage]
+racials:
+  - {name: Blood Fury, type: active, effect: "Attack power and spell power increased by 10% for 15 seconds.", tags: [burst, physical, spell]}
+  - {name: Shatter Curse, type: active, effect: "Immunity to curses and banes and reduced magical damage taken for 8 seconds.", tags: [survival, pvp]}
+  - {name: Axe Specialization, type: passive, effect: "Axes increase spell and ability critical strike chance by 1%.", tags: [axe]}
+  - {name: Hardiness, type: passive, effect: "Stun durations reduced by 20%.", tags: [pvp]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

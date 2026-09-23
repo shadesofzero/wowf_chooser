@@ -1,0 +1,6 @@
+alliance:
+  name: Alliance
+  color: "#2f6fd1"
+horde:
+  name: Horde
+  color: "#b3261e"

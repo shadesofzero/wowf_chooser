@@ -1,0 +1,15 @@
+id: tauren
+name: Tauren
+looks: [tall, brutish]
+blurb: Peaceful, towering nomads of Mulgore who revere the Earth Mother.
+variants:
+  - faction: horde
+    classes: [warrior, hunter, shaman, druid]
+    new_combos: []
+racials:
+  - {name: War Stomp, type: active, effect: "Stuns nearby enemies for 2 seconds.", tags: [pvp, survival, tank]}
+  - {name: Cultivation, type: active, effect: "Grow bonus herbs that anyone can gather.", tags: [leveling]}
+  - {name: Plainsrunning, type: passive, effect: "Movement speed increases the longer you keep moving.", tags: [mobility, leveling]}
+  - {name: Endurance, type: passive, effect: "Health increased by 5% and hit chance by 1%.", tags: [survival, tank, hit]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

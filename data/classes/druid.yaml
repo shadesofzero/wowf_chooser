@@ -1,0 +1,43 @@
+id: druid
+name: Druid
+color: "#FF7C0A"
+wowhead_class_id: 11
+armor: Leather
+fantasy: >
+  A guardian of nature who shifts between bear, cat, travel and caster forms
+  to fill any role. Skyborne druids get unique forms.
+changes:
+  - text: "Improved Mark of the Wild is baseline."
+    confidence: confirmed
+    sources: [mobalytics-explained]
+  - text: "Reported: Mangle for cat and bear, Eclipse for Balance, Wild Growth for Restoration, baseline Omen of Clarity, stronger bear tools and weapon scaling."
+    confidence: speculative
+    sources: [expcarry-changes]
+  - text: "Skyborne of both factions can be Druids, with unique druid forms."
+    confidence: confirmed
+    sources: [blizz-skyborne]
+specs:
+  - id: balance
+    name: Balance
+    roles: [ranged]
+    themes: [nature, shapeshift]
+    blurb: Moonkin caster of arcane and nature; Forever aims to make it raid-viable.
+    traits: {complexity: 2, solo: 2, group: 1, pvp: 2, survivability: 2, range: 3, utility: 3, burst: 1, pet: 0, forever_new: 3}
+    viability: {leveling: 3, dungeons: 3, raid: 2, pvp: 3, confidence: speculative, sources: [classic-baseline, classicwow-changes]}
+    racial_tags: [spell, mana, crit, hit, haste]
+  - id: feral
+    name: Feral
+    roles: [melee, tank]
+    themes: [shapeshift, nature, beasts]
+    blurb: Bear tank or cat DPS — the ultimate hybrid, shifting mid-fight.
+    traits: {complexity: 3, solo: 3, group: 2, pvp: 3, survivability: 3, range: 0, utility: 3, burst: 2, pet: 0, forever_new: 2}
+    viability: {leveling: 5, dungeons: 4, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, tank, survival, stealth, mobility, hit, crit, pvp, leveling]
+  - id: restoration
+    name: Restoration
+    roles: [healer]
+    themes: [nature, shapeshift]
+    blurb: Heal-over-time healer and a slippery flag carrier in PvP.
+    traits: {complexity: 2, solo: 1, group: 3, pvp: 3, survivability: 3, range: 2, utility: 3, burst: 1, pet: 0, forever_new: 1}
+    viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [healing, mana, mobility, pvp, survival, haste]

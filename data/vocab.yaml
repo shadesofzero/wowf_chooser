@@ -1,0 +1,98 @@
+# Shared vocabulary. Every id used in class/race/question files must be listed here.
+roles:
+  tank: Tank
+  healer: Healer
+  melee: Melee DPS
+  ranged: Ranged DPS
+
+themes:
+  holy: Holy light
+  nature: Nature & the wild
+  shadow: Shadow & dark magic
+  arcane: Arcane, fire & frost spellcraft
+  stealth: Stealth & poisons
+  beasts: Beasts & companions
+  elements: Elemental spirits & totems
+  weapons: Weapon mastery
+  heavy_armor: Plate & shield
+  shapeshift: Shapeshifting
+  demons: Demons
+
+# Spec traits are scored 0-3. `high`/`low` phrases explain a match in results.
+traits:
+  complexity:
+    label: Complexity
+    high: Deep, rewarding rotation to master
+    low: Easy to pick up and play well
+  solo:
+    label: Solo & leveling strength
+    high: Levels and solos comfortably
+    low: Shines brightest in a group
+  group:
+    label: Group demand
+    high: Always in demand for groups
+    low: Less pressure to perform in groups
+  pvp:
+    label: PvP strength
+    high: Strong in PvP
+    low: Low PvP pressure
+  survivability:
+    label: Survivability
+    high: Very hard to kill
+    low: Glass cannon — trades safety for damage
+  range:
+    label: Range
+    high: Fights from a distance
+    low: Up close and personal
+  utility:
+    label: Utility
+    high: Brings lots of utility (CC, buffs, tools)
+    low: Focused purely on its job
+  burst:
+    label: Burst
+    high: Big burst windows
+    low: Steady, sustained output
+  pet:
+    label: Pet
+    high: Fights alongside a pet
+    low: No pet to manage
+  forever_new:
+    label: Forever changes
+    high: Significantly reworked in Forever
+    low: Close to how it played in Classic
+
+content:
+  leveling: Leveling
+  dungeons: Dungeons
+  raid: Raids
+  pvp: PvP
+
+# Tags linking racials to specs. Specs list the tags they care about.
+racial_tags:
+  physical: Physical damage
+  spell: Spell damage
+  healing: Healing
+  tank: Tanking
+  mana: Mana / resources
+  burst: Offensive cooldown
+  sword: Swords
+  mace: Maces
+  axe: Axes
+  pvp: PvP / crowd-control defense
+  survival: Survival
+  mobility: Mobility
+  leveling: Leveling & convenience
+  beasts: Beast damage
+  stealth: Stealth
+  hit: Hit chance
+  crit: Critical strike
+  haste: Haste
+
+# Look tags for the aesthetic question.
+looks:
+  tall: Tall
+  short: Short
+  brutish: Brutish
+  elegant: Elegant
+  undead: Undead / macabre
+  exotic: New & unusual

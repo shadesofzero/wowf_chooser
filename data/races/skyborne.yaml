@@ -1,0 +1,28 @@
+id: skyborne
+name: Skyborne
+new_race: true
+looks: [tall, elegant, exotic]
+blurb: >
+  Descendants of Highborne exiles who bonded with wind spirits in Skywall.
+  New neutral race starting on Zephras Isle (levels 1–12); requires the optional
+  Heroic Pack purchase.
+variants:
+  - faction: horde
+    name: Windshaper Skyborne
+    classes: [warrior, hunter, rogue, druid, shaman]
+    new_combos: []
+    racials:
+      - {name: Skysight, type: active, effect: "Receive an Elemental Blessing that increases run speed by 10%.", tags: [mobility, leveling]}
+  - faction: alliance
+    name: High Order Skyborne
+    classes: [warrior, hunter, rogue, druid, mage]
+    new_combos: []
+    racials:
+      - {name: Read Ley Line, type: active, effect: "Activate a ley line for 100% increased health and mana regeneration.", tags: [mana, leveling]}
+racials:
+  - {name: Walk on Air, type: active, effect: "Glide gently downward through the air for 10 seconds.", tags: [mobility]}
+  - {name: Wind Blessed, type: passive, effect: "Melee, ranged and spell haste increased by 1%.", tags: [haste, physical, spell, healing]}
+  - {name: Elemental Insight, type: passive, effect: "Damage against Elementals increased by 5%.", tags: [leveling]}
+racials_confidence: confirmed
+sources: [blizz-skyborne, blizz-create-hero]
+notes: "Some community sites list narrower Skyborne class options; this follows Blizzard's Skyborne announcement."

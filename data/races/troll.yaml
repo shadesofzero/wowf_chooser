@@ -1,0 +1,15 @@
+id: troll
+name: Troll
+looks: [tall, exotic]
+blurb: Darkspear jungle trolls — mystics, hunters and voodoo practitioners.
+variants:
+  - faction: horde
+    classes: [warrior, hunter, rogue, priest, shaman, mage, warlock]
+    new_combos: [warlock]
+racials:
+  - {name: Berserking, type: active, effect: "Casting and attack speed increased by 10% for 10 seconds.", tags: [burst, haste, physical, spell, healing]}
+  - {name: Rapid Regeneration, type: active, effect: "Regenerate 50% of maximum health over time.", tags: [survival, leveling]}
+  - {name: Beast Slaying, type: passive, effect: "Damage against Beasts increased by 5%.", tags: [beasts, leveling]}
+  - {name: Regeneration, type: passive, effect: "10% of health regeneration continues in combat.", tags: [survival]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

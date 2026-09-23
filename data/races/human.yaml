@@ -1,0 +1,15 @@
+id: human
+name: Human
+looks: [tall, elegant]
+blurb: Resilient and adaptable citizens of Stormwind.
+variants:
+  - faction: alliance
+    classes: [warrior, paladin, hunter, rogue, priest, mage, warlock]
+    new_combos: [hunter]
+racials:
+  - {name: Will to Survive, type: active, effect: "Removes stun effects.", tags: [pvp]}
+  - {name: Perception, type: active, effect: "Detect stealthed enemies for 20 seconds.", tags: [pvp]}
+  - {name: Sword Specialization, type: passive, effect: "Swords increase spell and ability critical strike chance by 2%.", tags: [sword]}
+  - {name: The Human Spirit, type: passive, effect: "Spirit increased by 5%.", tags: [mana, healing]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

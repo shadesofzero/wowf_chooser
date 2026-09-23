@@ -1,0 +1,43 @@
+id: mage
+name: Mage
+color: "#3FC7EB"
+wowhead_class_id: 8
+armor: Cloth
+fantasy: >
+  A scholar of the arcane who wields fire and frost, conjures food and water,
+  and opens portals. Orc Mage is new in Forever.
+changes:
+  - text: "Reported: proc-based Arcane, deeper Fire crit/Pyroblast interactions, more reliable frozen-target bonuses, and a new research/scroll knowledge system."
+    confidence: speculative
+    sources: [expcarry-changes]
+  - text: "Orc Mage is a new Horde combination; High Order Skyborne can be Mages."
+    confidence: confirmed
+    sources: [blizz-create-hero, blizz-skyborne]
+  - text: "Reported among the fastest classes to level (~8% faster than average)."
+    confidence: speculative
+    sources: [lfcarry-classes]
+specs:
+  - id: arcane
+    name: Arcane
+    roles: [ranged]
+    themes: [arcane]
+    blurb: Utility-focused caster with Presence of Mind and Arcane Power bursts.
+    traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 1, range: 3, utility: 3, burst: 2, pet: 0, forever_new: 2}
+    viability: {leveling: 3, dungeons: 3, raid: 3, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, mana, burst, crit, haste, hit]
+  - id: fire
+    name: Fire
+    roles: [ranged]
+    themes: [arcane]
+    blurb: Crit-scaling pyromaniac — a raid damage powerhouse.
+    traits: {complexity: 1, solo: 1, group: 2, pvp: 1, survivability: 0, range: 3, utility: 2, burst: 3, pet: 0, forever_new: 1}
+    viability: {leveling: 2, dungeons: 3, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, burst, crit, hit, haste, mana]
+  - id: frost
+    name: Frost
+    roles: [ranged]
+    themes: [arcane]
+    blurb: Kiting, freezing and AoE-farming master; excellent leveler and PvPer.
+    traits: {complexity: 2, solo: 3, group: 3, pvp: 3, survivability: 2, range: 3, utility: 3, burst: 2, pet: 0, forever_new: 1}
+    viability: {leveling: 5, dungeons: 5, raid: 3, pvp: 5, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, mana, pvp, mobility, leveling, hit, crit]

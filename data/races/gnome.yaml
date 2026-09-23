@@ -1,0 +1,15 @@
+id: gnome
+name: Gnome
+looks: [short, exotic]
+blurb: Brilliant, excitable tinkerers of Gnomeregan.
+variants:
+  - faction: alliance
+    classes: [warrior, rogue, priest, mage, warlock]
+    new_combos: [priest]
+racials:
+  - {name: Escape Artist, type: active, effect: "Brief immunity to roots and snares.", tags: [pvp, mobility]}
+  - {name: "Eureka!", type: active, effect: "Next 3 spells or abilities cost less and deal 10% more damage or healing.", tags: [burst, spell, physical, healing]}
+  - {name: Expansive Mind, type: passive, effect: "Maximum mana, rage or energy increased by 5%.", tags: [mana]}
+  - {name: Engineering Specialization, type: passive, effect: "Engineering devices are more reliable.", tags: [pvp]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

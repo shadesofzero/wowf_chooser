@@ -1,0 +1,15 @@
+{
+  "name": "wowf-chooser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static quiz that recommends a WoW Forever class, spec and race.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && npx --yes serve site",
+    "test": "node scripts/build.mjs && node scripts/personas.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

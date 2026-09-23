@@ -1,0 +1,40 @@
+id: shaman
+name: Shaman
+color: "#0070DD"
+wowhead_class_id: 7
+armor: Mail
+fantasy: >
+  A spiritual guide who commands earth, fire, water and air through totems.
+  Now on both factions — Dwarf Shaman and Windshaper Skyborne are new.
+changes:
+  - text: "Available to both factions (Dwarf Shaman is a new Alliance option)."
+    confidence: confirmed
+    sources: [blizz-create-hero, classicwow-changes]
+  - text: "Reported additions: earlier Stormstrike and Maelstrom Weapon (Enhancement), Lava Burst (Elemental), Water Shield and Riptide (Restoration), totem QoL."
+    confidence: speculative
+    sources: [expcarry-changes]
+specs:
+  - id: elemental
+    name: Elemental
+    roles: [ranged]
+    themes: [elements, nature]
+    blurb: Lightning-hurling caster with huge crits.
+    traits: {complexity: 2, solo: 2, group: 2, pvp: 3, survivability: 2, range: 3, utility: 2, burst: 3, pet: 0, forever_new: 2}
+    viability: {leveling: 3, dungeons: 3, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, mana, burst, crit, haste, hit, pvp]
+  - id: enhancement
+    name: Enhancement
+    roles: [melee]
+    themes: [elements, weapons]
+    blurb: Windfury-powered melee with spell weaving; excellent leveler.
+    traits: {complexity: 2, solo: 3, group: 2, pvp: 3, survivability: 2, range: 0, utility: 3, burst: 3, pet: 0, forever_new: 2}
+    viability: {leveling: 5, dungeons: 3, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, spell, burst, axe, mace, crit, hit, haste, leveling]
+  - id: restoration
+    name: Restoration
+    roles: [healer]
+    themes: [elements, nature]
+    blurb: Chain Heal and totems — a superb group healer.
+    traits: {complexity: 2, solo: 1, group: 3, pvp: 2, survivability: 2, range: 2, utility: 3, burst: 1, pet: 0, forever_new: 1}
+    viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [healing, mana, haste, crit, survival]

@@ -1,0 +1,43 @@
+id: priest
+name: Priest
+color: "#E6E6E6"
+wowhead_class_id: 5
+armor: Cloth
+fantasy: >
+  A devoted healer who channels the Light — or embraces the Shadow to
+  torment the mind. Gnome Priest is new in Forever.
+changes:
+  - text: "Divine Spirit is baseline."
+    confidence: confirmed
+    sources: [mobalytics-explained]
+  - text: "Reported additions: Penance (Discipline), Binding Heal, Prayer of Mending (Holy); Fear Ward and Devouring Plague no longer race-locked."
+    confidence: speculative
+    sources: [expcarry-changes]
+  - text: "Gnome Priest is a new Alliance combination."
+    confidence: confirmed
+    sources: [blizz-create-hero]
+specs:
+  - id: discipline
+    name: Discipline
+    roles: [healer]
+    themes: [holy]
+    blurb: Shields, buffs and mana tricks; reportedly gains Penance in Forever.
+    traits: {complexity: 2, solo: 1, group: 3, pvp: 2, survivability: 2, range: 2, utility: 3, burst: 1, pet: 0, forever_new: 2}
+    viability: {leveling: 2, dungeons: 4, raid: 4, pvp: 3, confidence: speculative, sources: [classic-baseline, expcarry-changes]}
+    racial_tags: [healing, mana, spell, pvp, survival, haste]
+  - id: holy
+    name: Holy
+    roles: [healer]
+    themes: [holy]
+    blurb: The iconic raid healer with the strongest group healing toolkit.
+    traits: {complexity: 1, solo: 1, group: 3, pvp: 1, survivability: 1, range: 2, utility: 2, burst: 1, pet: 0, forever_new: 1}
+    viability: {leveling: 2, dungeons: 5, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [healing, mana, haste, crit]
+  - id: shadow
+    name: Shadow
+    roles: [ranged]
+    themes: [shadow]
+    blurb: Mind-flaying damage dealer that heals itself as it fights.
+    traits: {complexity: 2, solo: 3, group: 2, pvp: 3, survivability: 2, range: 3, utility: 2, burst: 2, pet: 0, forever_new: 2}
+    viability: {leveling: 5, dungeons: 3, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, mana, burst, pvp, hit, haste, leveling]

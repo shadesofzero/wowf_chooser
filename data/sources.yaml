@@ -1,0 +1,51 @@
+# reliability: official | datamine | community
+classic-baseline:
+  title: Classic Era baseline (community knowledge of 1.12 balance)
+  url: https://www.wowhead.com/classic
+  accessed: 2026-09-23
+  reliability: community
+blizz-skyborne:
+  title: "WoW: Forever – Meet the New Skyborne (Blizzard News)"
+  url: https://news.blizzard.com/en-us/article/24302071/wow-forever-meet-the-new-skyborne
+  accessed: 2026-09-23
+  reliability: official
+blizz-create-hero:
+  title: "Create the Hero You Want to Be in World of Warcraft: Forever (Blizzard News)"
+  url: https://news.blizzard.com/en-us/article/24304075/create-the-hero-you-want-to-be-in-world-of-warcraft-forever
+  accessed: 2026-09-23
+  reliability: official
+wowhead-combos:
+  title: All Racials and Available Class-Race Combinations (Wowhead)
+  url: https://www.wowhead.com/forever/guide/new-race-class-combinations
+  accessed: 2026-09-23
+  reliability: community
+classicwow-changes:
+  title: WoW Forever vs Classic Era – What Changes (classicwow.gg)
+  url: https://classicwow.gg/forever/changes
+  accessed: 2026-09-23
+  reliability: community
+mobalytics-explained:
+  title: "World of Warcraft Forever: Classic+ Features & Release Date (Mobalytics)"
+  url: https://mobalytics.gg/wow-forever/guides/wow-forever-explained
+  accessed: 2026-09-23
+  reliability: community
+lfcarry-classes:
+  title: "WoW Forever Classes and Races: 9 Classes, 6 New Combos and the Paladin Rework (LFCarry)"
+  url: https://lfcarry.com/guides/wow-forever-classes
+  accessed: 2026-09-23
+  reliability: community
+foreverchanges:
+  title: WoW Forever class changes vs Classic (ForeverChanges)
+  url: https://foreverchanges.pro/changes
+  accessed: 2026-09-23
+  reliability: community
+expcarry-changes:
+  title: "WoW Forever Class Changes: Talents & Abilities (ExpCarry)"
+  url: https://expcarry.com/wow-forever-class-changes
+  accessed: 2026-09-23
+  reliability: community
+wowclassicforever-races:
+  title: "WoW Forever Races: Racials, Skyborne & Class Combos"
+  url: https://wowclassicforever.info/races/
+  accessed: 2026-09-23
+  reliability: community

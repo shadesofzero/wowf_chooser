@@ -1,0 +1,15 @@
+id: undead
+name: Undead
+looks: [undead]
+blurb: The Forsaken — free-willed undead of the Undercity.
+variants:
+  - faction: horde
+    classes: [warrior, paladin, rogue, priest, mage, warlock]
+    new_combos: [paladin]
+racials:
+  - {name: Will of the Forsaken, type: active, effect: "Removes charm, fear and sleep effects.", tags: [pvp]}
+  - {name: Cannibalize, type: active, effect: "Consume a corpse to regenerate 35% health and mana over time.", tags: [leveling, mana]}
+  - {name: Underwater Breathing, type: passive, effect: "Breathe underwater 300% longer.", tags: [leveling]}
+  - {name: Touch of the Grave, type: passive, effect: "Attacks sometimes drain health from the target.", tags: [survival, physical, spell]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

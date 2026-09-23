@@ -1,0 +1,37 @@
+id: rogue
+name: Rogue
+color: "#FFF468"
+wowhead_class_id: 4
+armor: Leather
+fantasy: >
+  A cunning assassin who strikes from the shadows with poisoned blades,
+  picks locks and pockets, and controls fights with stuns.
+changes:
+  - text: "Assassination gains Mutilate and Venom; Combat gains Restless Blades and Hack and Slash (merged weapon specializations)."
+    confidence: speculative
+    sources: [expcarry-changes]
+specs:
+  - id: assassination
+    name: Assassination
+    roles: [melee]
+    themes: [stealth]
+    blurb: Poison-soaked burst from stealth; Forever reportedly adds Mutilate.
+    traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 1, range: 0, utility: 1, burst: 3, pet: 0, forever_new: 2}
+    viability: {leveling: 3, dungeons: 4, raid: 4, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, stealth, crit, hit, pvp]
+  - id: combat
+    name: Combat
+    roles: [melee]
+    themes: [weapons, stealth]
+    blurb: Sword or fist brawler with Blade Flurry and Adrenaline Rush — Classic's raid rogue.
+    traits: {complexity: 1, solo: 2, group: 3, pvp: 2, survivability: 1, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 1}
+    viability: {leveling: 4, dungeons: 4, raid: 5, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, sword, mace, axe, hit, crit, haste]
+  - id: subtlety
+    name: Subtlety
+    roles: [melee]
+    themes: [stealth, shadow]
+    blurb: Opener-focused shadow stalker; a PvP legend.
+    traits: {complexity: 3, solo: 2, group: 1, pvp: 3, survivability: 2, range: 0, utility: 2, burst: 3, pet: 0, forever_new: 2}
+    viability: {leveling: 3, dungeons: 2, raid: 2, pvp: 5, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, stealth, pvp, crit, survival]

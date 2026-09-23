@@ -1,0 +1,49 @@
+id: warrior
+name: Warrior
+color: "#C69B6D"
+wowhead_class_id: 1
+armor: Plate
+fantasy: >
+  A master of arms who charges headlong into battle, fuelled by rage.
+  Gear-hungry and slow to level, but the backbone of every raid.
+changes:
+  - text: "Arms gains Spearing Strike, Bloodthrill (Overpower on Rend targets) and Weaponmaster; weapon specialization talents removed."
+    confidence: likely
+    sources: [foreverchanges]
+  - text: "Fury gains Boundless Rage (+10 max rage) and Raging Blows (off-hand Whirlwind strikes, cheaper Cleave)."
+    confidence: likely
+    sources: [foreverchanges]
+  - text: "Protection gains Master of Defense (rage from dodge/parry), Vanguard (Charge in Defensive Stance) and Focused Rage."
+    confidence: likely
+    sources: [foreverchanges]
+  - text: "Improved Battle Shout is now baseline."
+    confidence: confirmed
+    sources: [mobalytics-explained]
+  - text: "Reported as the slowest class to level (~12% slower than average)."
+    confidence: speculative
+    sources: [lfcarry-classes]
+specs:
+  - id: arms
+    name: Arms
+    roles: [melee]
+    themes: [weapons, heavy_armor]
+    blurb: Two-handed duelist built around big hits, Mortal Strike and battlefield control.
+    traits: {complexity: 2, solo: 1, group: 2, pvp: 3, survivability: 2, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 2}
+    viability: {leveling: 3, dungeons: 3, raid: 3, pvp: 5, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, sword, axe, mace, pvp, hit, crit, survival]
+  - id: fury
+    name: Fury
+    roles: [melee]
+    themes: [weapons, heavy_armor]
+    blurb: Dual-wielding berserker — top-tier raid damage once geared.
+    traits: {complexity: 2, solo: 1, group: 3, pvp: 1, survivability: 1, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 2}
+    viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [physical, burst, sword, axe, mace, hit, crit, haste]
+  - id: protection
+    name: Protection
+    roles: [tank]
+    themes: [weapons, heavy_armor]
+    blurb: Sword-and-board tank; the classic main tank with the deepest threat toolkit.
+    traits: {complexity: 3, solo: 1, group: 3, pvp: 1, survivability: 3, range: 0, utility: 2, burst: 0, pet: 0, forever_new: 2}
+    viability: {leveling: 2, dungeons: 5, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [tank, survival, physical, hit, sword, axe, mace]

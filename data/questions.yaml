@@ -1,0 +1,199 @@
+# Effects an answer can have (weights are usually -3..3):
+#   role: <role>        +w when the spec can fill that role
+#   theme: <theme>      +w when the spec has that theme
+#   trait: <trait>      w * (trait - 1.5)   (traits are 0-3, so low values can score positive on negative weights)
+#   viability: <content> w * (rating - 3) / 1.5   (ratings are 1-5)
+#   race_tag: <tag>     +w per matching racial on a race
+#   look: <look>        +w when the race has that look
+#   novelty: true       +w on new race/class combos and new races
+# Answers may also set `filter: {faction: alliance|horde}`.
+# `why` overrides the auto-generated reason shown in results.
+questions:
+  - id: faction
+    text: Do you have a faction in mind?
+    help: Every class is available on both factions in Forever, so this only narrows your race choices.
+    type: single
+    answers:
+      - id: alliance
+        text: Alliance — for the King!
+        filter: {faction: alliance}
+      - id: horde
+        text: Horde — Lok'tar ogar!
+        filter: {faction: horde}
+      - id: any
+        text: No preference — I'll go where my friends are or pick what fits best.
+
+  - id: role
+    text: What do you want to do in a group?
+    type: single
+    answers:
+      - id: tank
+        text: Tank — lead the charge and take the hits
+        effects: [{role: tank, w: 6}]
+      - id: healer
+        text: Heal — keep everyone alive
+        effects: [{role: healer, w: 6}]
+      - id: melee
+        text: Melee damage — get up close
+        effects: [{role: melee, w: 6}]
+      - id: ranged
+        text: Ranged damage — fight from afar
+        effects: [{role: ranged, w: 6}]
+      - id: flex
+        text: I want to be able to do a bit of everything
+        effects: [{trait: utility, w: 2}, {theme: shapeshift, w: 2}]
+
+  - id: theme
+    text: Which fantasies appeal to you? (pick up to 3)
+    type: multi
+    max: 3
+    answers:
+      - {id: holy, text: "A champion of the Holy Light", effects: [{theme: holy, w: 3}]}
+      - {id: nature, text: "Nature, druids and the wild", effects: [{theme: nature, w: 3}]}
+      - {id: shadow, text: "Shadow and forbidden dark magic", effects: [{theme: shadow, w: 3}]}
+      - {id: arcane, text: "Arcane scholar hurling fire and frost", effects: [{theme: arcane, w: 3}]}
+      - {id: stealth, text: "Stealthy assassin with poisoned blades", effects: [{theme: stealth, w: 3}]}
+      - {id: beasts, text: "A loyal animal companion", effects: [{theme: beasts, w: 3}, {trait: pet, w: 1}]}
+      - {id: elements, text: "Commanding the elements with totems", effects: [{theme: elements, w: 3}]}
+      - {id: weapons, text: "A master of weapons", effects: [{theme: weapons, w: 3}]}
+      - {id: armor, text: "Clad in heavy plate with a shield", effects: [{theme: heavy_armor, w: 3}]}
+      - {id: shapeshift, text: "Shapeshifting into animals", effects: [{theme: shapeshift, w: 3}]}
+      - {id: demons, text: "Enslaving demons to do my bidding", effects: [{theme: demons, w: 3}]}
+
+  - id: complexity
+    text: How much complexity do you want?
+    type: single
+    answers:
+      - id: simple
+        text: Keep it simple — I want to relax
+        effects: [{trait: complexity, w: -2}]
+      - id: medium
+        text: Some depth, but nothing overwhelming
+      - id: complex
+        text: Give me something to master
+        effects: [{trait: complexity, w: 2}]
+
+  - id: content
+    text: What will you spend most of your time doing at 60?
+    type: single
+    answers:
+      - id: raid
+        text: Raiding — clearing Molten Core and beyond
+        effects: [{viability: raid, w: 2}, {trait: group, w: 1}]
+      - id: dungeons
+        text: Dungeons with friends or pugs
+        effects: [{viability: dungeons, w: 2}, {trait: group, w: 1}]
+      - id: pvp
+        text: PvP — battlegrounds and world PvP
+        effects: [{viability: pvp, w: 2}, {trait: pvp, w: 1}, {race_tag: pvp, w: 1.5}]
+      - id: solo
+        text: Questing, farming and exploring on my own
+        effects: [{viability: leveling, w: 2}, {trait: solo, w: 1}, {race_tag: leveling, w: 1}]
+      - id: mix
+        text: A casual mix of everything
+
+  - id: solo
+    text: How important is leveling and playing solo?
+    help: Leveling 1–60 is estimated at around 150 hours in Forever.
+    type: single
+    answers:
+      - id: very
+        text: Very — I level alone and want it smooth
+        effects: [{trait: solo, w: 2}, {race_tag: leveling, w: 0.5}]
+      - id: some
+        text: Somewhat — I'll group sometimes
+        effects: [{trait: solo, w: 0.5}]
+      - id: not
+        text: Not much — I'll be grouping most of the time
+        effects: [{trait: group, w: 1}]
+
+  - id: range
+    text: Where do you like to be in a fight?
+    type: single
+    answers:
+      - id: close
+        text: In the thick of it
+        effects: [{trait: range, w: -1.5}]
+      - id: far
+        text: At a safe distance, kiting if needed
+        effects: [{trait: range, w: 1.5}]
+      - id: either
+        text: Doesn't matter
+
+  - id: pace
+    text: Which rhythm sounds more fun?
+    type: single
+    answers:
+      - id: burst
+        text: Explosive bursts — line up cooldowns and delete targets
+        effects: [{trait: burst, w: 1.5}, {race_tag: burst, w: 0.5}]
+      - id: sustained
+        text: Steady pressure — wear enemies down over time
+        effects: [{trait: burst, w: -1.5}]
+      - id: either
+        text: No preference
+
+  - id: survival
+    text: How do you feel about dying?
+    type: single
+    answers:
+      - id: tough
+        text: I want to be hard to kill
+        effects: [{trait: survivability, w: 1.5}, {race_tag: survival, w: 0.5}]
+      - id: glass
+        text: Glass cannon is fine if the damage is worth it
+        effects: [{trait: survivability, w: -1}, {trait: burst, w: 0.5}]
+      - id: either
+        text: Somewhere in between
+
+  - id: utility
+    text: Do you want to be the Swiss army knife?
+    type: single
+    answers:
+      - id: utility
+        text: Yes — buffs, crowd control, portals, resurrections
+        effects: [{trait: utility, w: 1.5}]
+      - id: focused
+        text: No — let me focus on doing my job really well
+        effects: [{trait: utility, w: -1}]
+      - id: either
+        text: No strong feeling
+
+  - id: pet
+    text: How do you feel about pets?
+    type: single
+    answers:
+      - id: love
+        text: I want a permanent companion
+        effects: [{trait: pet, w: 2}]
+      - id: no
+        text: I'd rather not manage one
+        effects: [{trait: pet, w: -2}]
+      - id: either
+        text: Don't care
+
+  - id: novelty
+    text: Do you want something new to Forever?
+    help: New combos include Undead Paladin, Dwarf Shaman, Gnome Priest, Human Hunter, Orc Mage, Troll Warlock, and the new Skyborne race.
+    type: single
+    answers:
+      - id: new
+        text: Yes — new combos, reworked specs, the new Skyborne race
+        effects: [{trait: forever_new, w: 1.5}, {novelty: true, w: 3}]
+      - id: classic
+        text: No — I want the Classic experience I remember
+        effects: [{trait: forever_new, w: -1}, {novelty: true, w: -2}]
+      - id: either
+        text: Either is fine
+
+  - id: look
+    text: What should your character look like?
+    type: multi
+    max: 2
+    answers:
+      - {id: tall, text: "Tall and imposing", effects: [{look: tall, w: 1.5}]}
+      - {id: short, text: "Short and sturdy", effects: [{look: short, w: 1.5}]}
+      - {id: brutish, text: "Brutish and powerful", effects: [{look: brutish, w: 1.5}]}
+      - {id: elegant, text: "Graceful and elegant", effects: [{look: elegant, w: 1.5}]}
+      - {id: undead, text: "Undead and macabre", effects: [{look: undead, w: 2}]}
+      - {id: exotic, text: "Something unusual", effects: [{look: exotic, w: 1.5}]}

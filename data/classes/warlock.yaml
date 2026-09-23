@@ -1,0 +1,40 @@
+id: warlock
+name: Warlock
+color: "#8788EE"
+wowhead_class_id: 9
+armor: Cloth
+fantasy: >
+  A wielder of fel and shadow who binds demons to their will, drains the life
+  of enemies and summons allies across the world. Troll Warlock is new.
+changes:
+  - text: "Reported: Banes as a new debuff category, deeper Demonology pet/sacrifice play, Incinerate for Destruction."
+    confidence: speculative
+    sources: [expcarry-changes]
+  - text: "Troll Warlock is a new Horde combination."
+    confidence: confirmed
+    sources: [blizz-create-hero]
+specs:
+  - id: affliction
+    name: Affliction
+    roles: [ranged]
+    themes: [shadow, demons]
+    blurb: Damage-over-time specialist that drains enemies dry; brutal in PvP.
+    traits: {complexity: 2, solo: 3, group: 2, pvp: 3, survivability: 3, range: 3, utility: 2, burst: 0, pet: 2, forever_new: 2}
+    viability: {leveling: 5, dungeons: 3, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, pvp, survival, hit, haste, leveling]
+  - id: demonology
+    name: Demonology
+    roles: [ranged]
+    themes: [demons, shadow]
+    blurb: Commander of demons with the sturdiest pet play in the game.
+    traits: {complexity: 2, solo: 3, group: 2, pvp: 3, survivability: 3, range: 3, utility: 2, burst: 1, pet: 3, forever_new: 2}
+    viability: {leveling: 5, dungeons: 3, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline, expcarry-changes]}
+    racial_tags: [spell, survival, pvp, hit, leveling]
+  - id: destruction
+    name: Destruction
+    roles: [ranged]
+    themes: [shadow, demons]
+    blurb: Shadow Bolt and fire nuker; top-tier raid damage.
+    traits: {complexity: 1, solo: 2, group: 2, pvp: 2, survivability: 1, range: 3, utility: 2, burst: 3, pet: 1, forever_new: 1}
+    viability: {leveling: 3, dungeons: 3, raid: 5, pvp: 3, confidence: speculative, sources: [classic-baseline]}
+    racial_tags: [spell, burst, crit, hit, haste]

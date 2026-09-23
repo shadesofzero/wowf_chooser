@@ -1,0 +1,15 @@
+id: night_elf
+name: Night Elf
+looks: [tall, elegant]
+blurb: Ancient, reclusive guardians of Teldrassil and the wilds.
+variants:
+  - faction: alliance
+    classes: [warrior, hunter, rogue, priest, druid]
+    new_combos: []
+racials:
+  - {name: "Elune's Light", type: active, effect: "Critical strike chance increased by 10% for 15 seconds.", tags: [burst, crit, physical, spell, healing]}
+  - {name: Shadowmeld, type: active, effect: "Enter stealth while stationary.", tags: [stealth, pvp]}
+  - {name: Quickness, type: passive, effect: "Dodge chance increased by 1% and run speed by 2%.", tags: [survival, tank, mobility]}
+  - {name: Wisp Spirit, type: passive, effect: "Run speed increased by 75% while dead.", tags: [leveling]}
+racials_confidence: likely
+sources: [blizz-create-hero, wowhead-combos]

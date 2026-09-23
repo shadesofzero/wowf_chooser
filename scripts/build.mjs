@@ -39,6 +39,11 @@ function checkSources(list, where) {
   if (!list || list.length === 0) return warn(`${where}: no sources`);
   for (const s of list) if (!(s in sources)) err(`${where}: unknown source "${s}"`);
 }
+// Icons are Wowhead icon file names (e.g. classicon_mage); required where `need` is set.
+function checkIcon(icon, where, need = false) {
+  if (icon === undefined) return need && err(`${where}: missing icon`);
+  if (!/^[a-z0-9_]+$/.test(icon)) err(`${where}: bad icon name "${icon}"`);
+}
 function checkConfidence(c, where) {
   if (!CONFIDENCE.includes(c)) err(`${where}: confidence must be one of ${CONFIDENCE.join('/')}, got "${c}"`);
 }
@@ -47,6 +52,7 @@ for (const [id, s] of Object.entries(sources)) {
   if (!s.url || !s.title) err(`sources.${id}: needs url and title`);
   if (!RELIABILITY.includes(s.reliability)) err(`sources.${id}: bad reliability "${s.reliability}"`);
 }
+for (const [id, f] of Object.entries(factions)) checkIcon(f.icon, `factions.${id}`, true);
 
 // Classes and specs
 const classIds = new Set();
@@ -56,6 +62,7 @@ for (const c of classes) {
   if (classIds.has(c.id)) err(`${where}: duplicate class id ${c.id}`);
   classIds.add(c.id);
   for (const k of ['name', 'color', 'fantasy', 'wowhead_class_id']) if (!c[k]) err(`${where}: missing ${k}`);
+  checkIcon(c.icon, where, true);
   (c.changes || []).forEach((ch, i) => {
     checkConfidence(ch.confidence, `${where} changes[${i}]`);
     checkSources(ch.sources, `${where} changes[${i}]`);
@@ -66,6 +73,7 @@ for (const c of classes) {
     if (specIds.has(full)) err(`${sw}: duplicate spec`);
     specIds.add(full);
     if (!s.roles?.length) err(`${sw}: needs roles`);
+    checkIcon(s.icon, sw, true);
     s.roles?.forEach((r) => checkIn(r, vocab.roles, sw));
     s.themes?.forEach((t) => checkIn(t, vocab.themes, sw));
     s.racial_tags?.forEach((t) => checkIn(t, vocab.racial_tags, sw));
@@ -91,11 +99,13 @@ for (const r of races) {
   if (raceIds.has(r.id)) err(`${where}: duplicate race id ${r.id}`);
   raceIds.add(r.id);
   r.looks?.forEach((l) => checkIn(l, lookSet, where));
+  checkIcon(r.icon, where, true);
   checkConfidence(r.racials_confidence, where);
   checkSources(r.sources, where);
   const checkRacials = (list, w) =>
     (list || []).forEach((rc) => {
       if (!['active', 'passive'].includes(rc.type)) err(`${w} ${rc.name}: type must be active/passive`);
+      checkIcon(rc.icon, `${w} ${rc.name}`, true);
       rc.tags?.forEach((t) => checkIn(t, vocab.racial_tags, `${w} ${rc.name}`));
     });
   checkRacials(r.racials, where);
@@ -136,6 +146,7 @@ for (const q of questions) {
     if (aIds.has(a.id)) err(`${aw}: duplicate answer id`);
     aIds.add(a.id);
     if (a.filter?.faction) checkIn(a.filter.faction, factions, aw);
+    checkIcon(a.icon, aw);
     for (const e of a.effects || []) {
       if (typeof e.w !== 'number') err(`${aw}: effect missing numeric w`);
       if (e.role) checkIn(e.role, vocab.roles, aw);
@@ -159,6 +170,7 @@ if (errors.length) {
 // Output: attach Wowhead links so the client doesn't need URL knowledge.
 const WH = 'https://www.wowhead.com/forever';
 const out = {
+  iconBase: 'https://wow.zamimg.com/images/wow/icons',
   meta,
   sources,
   factions,

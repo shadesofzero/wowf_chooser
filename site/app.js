@@ -10,6 +10,16 @@ const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const day = (d) => String(d).slice(0, 10);
 
+// Wowhead game icons. Sizes: small (18px), medium (36px), large (56px).
+const ROLE_ICONS = { tank: 'inv_shield_06', healer: 'spell_holy_heal', melee: 'inv_sword_04', ranged: 'ability_marksmanship' };
+const CONTENT_ICONS = { leveling: 'inv_misc_map_01', dungeons: 'inv_misc_key_03', raid: 'inv_misc_head_dragon_01', pvp: 'inv_bannerpvp_02' };
+function ico(name, cls = '', size = 'large', alt = '') {
+  if (!name) return '';
+  return `<img class="ico ${cls}" src="${data.iconBase}/${size}/${esc(name)}.jpg" alt="${esc(alt)}" loading="lazy"
+    onerror="this.style.visibility='hidden'">`;
+}
+const EXT = '<svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2h5v5M14 2 7 9M12 9.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
 // ---- URL hash state: #faction=horde&theme=holy,armor&done=1 ----
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
@@ -46,11 +56,14 @@ function render() {
 function renderIntro() {
   app.innerHTML = `
     <section class="intro card">
+      <div class="class-strip">
+        ${data.classes.map((c) => `<span style="--cls:${esc(c.color)}" title="${esc(c.name)}">${ico(c.icon, 'framed', 'large', c.name)}</span>`).join('')}
+      </div>
       <h1>Find your class in <span class="gold">World of Warcraft: Forever</span></h1>
       <p>Answer ${data.questions.length} quick questions about the fantasy, playstyle and content you enjoy.
       We'll recommend a class, spec and race — including the new combos and the Skyborne.</p>
       <p class="muted">${esc(data.meta.disclaimer)}</p>
-      <button class="btn primary" id="start">Start</button>
+      <button class="btn primary big" id="start">Start the quiz →</button>
     </section>`;
   document.getElementById('start').onclick = () => {
     started = true;
@@ -70,11 +83,11 @@ function renderQuestion(q) {
       <p class="step">Question ${step + 1} of ${data.questions.length}</p>
       <h2>${esc(q.text)}</h2>
       ${q.help ? `<p class="muted">${esc(q.help)}</p>` : ''}
-      <div class="answers ${multi ? 'multi' : ''}">
+      <div class="answers ${multi ? 'multi' : ''} ${q.answers.some((a) => a.icon) ? 'with-icons' : ''}">
         ${q.answers
           .map(
             (a) => `<button class="answer ${selected.has(a.id) ? 'selected' : ''}" data-id="${esc(a.id)}"
-              aria-pressed="${selected.has(a.id)}">${esc(a.text)}</button>`
+              aria-pressed="${selected.has(a.id)}">${a.icon ? ico(a.icon, 'framed') : ''}<span>${esc(a.text)}</span></button>`
           )
           .join('')}
       </div>
@@ -126,9 +139,9 @@ function renderResults() {
       <p class="muted">${faction ? `Showing ${esc(data.factions[faction].name)} races only. ` : ''}
       Ranked by how well each spec fits your answers.</p>
       <div class="actions">
-        <button class="btn" id="edit">Change answers</button>
-        <button class="btn" id="restart">Start over</button>
-        <button class="btn" id="share">Copy share link</button>
+        <button class="btn" id="edit">✎ Change answers</button>
+        <button class="btn" id="restart">↺ Start over</button>
+        <button class="btn" id="share"><svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 9.5a3 3 0 0 0 4.2 0l2.4-2.4a3 3 0 0 0-4.2-4.2L8 3.8M9.5 6.5a3 3 0 0 0-4.2 0L2.9 8.9a3 3 0 0 0 4.2 4.2l.9-.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Copy share link</button>
       </div>
     </section>
     ${picks.map((p, i) => resultCard(p, i)).join('')}`;
@@ -141,7 +154,7 @@ function renderResults() {
   document.getElementById('share').onclick = async (e) => {
     try {
       await navigator.clipboard.writeText(location.href);
-      e.target.textContent = 'Link copied!';
+      e.target.textContent = '✓ Link copied!';
     } catch {
       e.target.textContent = 'Copy the URL from your address bar';
     }
@@ -155,11 +168,15 @@ function resultCard({ cls, spec, reasons, alternatives }, i) {
   return `
   <article class="card result" style="--cls:${esc(cls.color)}">
     <header>
-      <span class="rank">#${i + 1}</span>
+      <div class="portrait">
+        ${ico(cls.icon, 'framed cls-icon', 'large', cls.name)}
+        ${ico(spec.icon, 'framed spec-icon', 'medium', spec.name)}
+        <span class="rank">${i + 1}</span>
+      </div>
       <div>
         <h2>${esc(spec.name)} <span class="cls">${esc(cls.name)}</span></h2>
         <div class="chips">
-          ${spec.roles.map((r) => `<span class="chip">${esc(vocab.roles[r])}</span>`).join('')}
+          ${spec.roles.map((r) => `<span class="chip">${ico(ROLE_ICONS[r], '', 'small')}${esc(vocab.roles[r])}</span>`).join('')}
           <span class="chip">${esc(cls.armor)}</span>
         </div>
       </div>
@@ -172,7 +189,7 @@ function resultCard({ cls, spec, reasons, alternatives }, i) {
 
     <h3>Viability ${badge(v.confidence)}</h3>
     <dl class="viability">
-      ${Object.keys(vocab.content).map((k) => `<div><dt>${esc(vocab.content[k])}</dt><dd>${stars(v[k])}</dd></div>`).join('')}
+      ${Object.keys(vocab.content).map((k) => `<div>${ico(CONTENT_ICONS[k], 'framed', 'medium')}<dt>${esc(vocab.content[k])}</dt><dd>${stars(v[k])}</dd></div>`).join('')}
     </dl>
 
     <h3>Best races</h3>
@@ -184,13 +201,13 @@ function resultCard({ cls, spec, reasons, alternatives }, i) {
     </details>` : ''}
 
     ${alternatives.length ? `<p class="alts">Other ${esc(cls.name)} specs: ${alternatives
-      .map((a) => `${esc(a.spec.name)} (${a.spec.roles.map((r) => esc(vocab.roles[r])).join('/')})`)
+      .map((a) => `${ico(a.spec.icon, 'inline', 'small')} ${esc(a.spec.name)} (${a.spec.roles.map((r) => esc(vocab.roles[r])).join('/')})`)
       .join(', ')}</p>` : ''}
 
     <div class="links">
-      <a class="btn" href="${esc(cls.links.guides)}" target="_blank" rel="noopener">${esc(cls.name)} guides on Wowhead ↗</a>
-      <a class="btn" href="${esc(cls.links.talents)}" target="_blank" rel="noopener">Talent calculator ↗</a>
-      <a class="btn" href="${esc(cls.links.class)}" target="_blank" rel="noopener">Class abilities ↗</a>
+      <a class="btn" href="${esc(cls.links.guides)}" target="_blank" rel="noopener">${esc(cls.name)} guides on Wowhead ${EXT}</a>
+      <a class="btn" href="${esc(cls.links.talents)}" target="_blank" rel="noopener">Talent calculator ${EXT}</a>
+      <a class="btn" href="${esc(cls.links.class)}" target="_blank" rel="noopener">Class abilities ${EXT}</a>
     </div>
   </article>`;
 }
@@ -200,21 +217,27 @@ function raceCard({ race, variant, racials, isNew }) {
   return `
   <div class="race">
     <div class="race-head">
-      <strong>${esc(variant.name || race.name)}</strong>
-      <span class="faction" style="--fc:${esc(f.color)}">${esc(f.name)}</span>
-      ${isNew ? `<span class="badge new">${race.new_race ? 'New race' : 'New combo'}</span>` : ''}
+      ${ico(race.icon, 'framed', 'large', race.name)}
+      <div>
+        <strong>${esc(variant.name || race.name)}</strong>
+        <div class="race-tags">
+          <span class="faction" style="--fc:${esc(f.color)}">${ico(f.icon, '', 'small')}${esc(f.name)}</span>
+          ${isNew ? `<span class="badge new">${race.new_race ? 'New race' : 'New combo'}</span>` : ''}
+        </div>
+      </div>
     </div>
     <ul class="racials">
       ${racials
         .map(
           (r) => `<li class="${r.relevant ? 'relevant' : ''}">
+            ${ico(r.icon, 'framed', 'medium')}<div>
             <span class="rname">${esc(r.name)}</span> <span class="rtype">${r.type}</span>
-            <span class="reffect">${esc(r.effect)}</span></li>`
+            <span class="reffect">${esc(r.effect)}</span></div></li>`
         )
         .join('')}
     </ul>
     <p class="muted small">Highlighted racials help this spec. Racials: ${badge(race.racials_confidence)}
-      · <a href="${esc(race.links.guide)}" target="_blank" rel="noopener">Race guide ↗</a></p>
+      · <a href="${esc(race.links.guide)}" target="_blank" rel="noopener">Race guide ${EXT}</a></p>
   </div>`;
 }
 

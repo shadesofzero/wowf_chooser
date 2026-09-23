@@ -15,12 +15,15 @@ questions:
     type: single
     answers:
       - id: alliance
+        icon: ui_allianceicon
         text: Alliance — for the King!
         filter: {faction: alliance}
       - id: horde
+        icon: ui_hordeicon
         text: Horde — Lok'tar ogar!
         filter: {faction: horde}
       - id: any
+        icon: inv_misc_map_01
         text: No preference — I'll go where my friends are or pick what fits best.
 
   - id: role
@@ -28,18 +31,23 @@ questions:
     type: single
     answers:
       - id: tank
+        icon: inv_shield_06
         text: Tank — lead the charge and take the hits
         effects: [{role: tank, w: 6}]
       - id: healer
+        icon: spell_holy_heal
         text: Heal — keep everyone alive
         effects: [{role: healer, w: 6}]
       - id: melee
+        icon: inv_sword_04
         text: Melee damage — get up close
         effects: [{role: melee, w: 6}]
       - id: ranged
+        icon: ability_marksmanship
         text: Ranged damage — fight from afar
         effects: [{role: ranged, w: 6}]
       - id: flex
+        icon: ability_druid_catform
         text: I want to be able to do a bit of everything
         effects: [{trait: utility, w: 2}, {theme: shapeshift, w: 2}]
 
@@ -48,17 +56,17 @@ questions:
     type: multi
     max: 3
     answers:
-      - {id: holy, text: "A champion of the Holy Light", effects: [{theme: holy, w: 3}]}
-      - {id: nature, text: "Nature, druids and the wild", effects: [{theme: nature, w: 3}]}
-      - {id: shadow, text: "Shadow and forbidden dark magic", effects: [{theme: shadow, w: 3}]}
-      - {id: arcane, text: "Arcane scholar hurling fire and frost", effects: [{theme: arcane, w: 3}]}
-      - {id: stealth, text: "Stealthy assassin with poisoned blades", effects: [{theme: stealth, w: 3}]}
-      - {id: beasts, text: "A loyal animal companion", effects: [{theme: beasts, w: 3}, {trait: pet, w: 1}]}
-      - {id: elements, text: "Commanding the elements with totems", effects: [{theme: elements, w: 3}]}
-      - {id: weapons, text: "A master of weapons", effects: [{theme: weapons, w: 3}]}
-      - {id: armor, text: "Clad in heavy plate with a shield", effects: [{theme: heavy_armor, w: 3}]}
-      - {id: shapeshift, text: "Shapeshifting into animals", effects: [{theme: shapeshift, w: 3}]}
-      - {id: demons, text: "Enslaving demons to do my bidding", effects: [{theme: demons, w: 3}]}
+      - {id: holy, icon: spell_holy_holybolt, text: "A champion of the Holy Light", effects: [{theme: holy, w: 3}]}
+      - {id: nature, icon: spell_nature_protectionformnature, text: "Nature, druids and the wild", effects: [{theme: nature, w: 3}]}
+      - {id: shadow, icon: spell_shadow_shadowwordpain, text: "Shadow and forbidden dark magic", effects: [{theme: shadow, w: 3}]}
+      - {id: arcane, icon: spell_fire_flamebolt, text: "Arcane scholar hurling fire and frost", effects: [{theme: arcane, w: 3}]}
+      - {id: stealth, icon: ability_stealth, text: "Stealthy assassin with poisoned blades", effects: [{theme: stealth, w: 3}]}
+      - {id: beasts, icon: ability_hunter_beasttaming, text: "A loyal animal companion", effects: [{theme: beasts, w: 3}, {trait: pet, w: 1}]}
+      - {id: elements, icon: spell_nature_stoneskintotem, text: "Commanding the elements with totems", effects: [{theme: elements, w: 3}]}
+      - {id: weapons, icon: inv_sword_27, text: "A master of weapons", effects: [{theme: weapons, w: 3}]}
+      - {id: armor, icon: inv_shield_06, text: "Clad in heavy plate with a shield", effects: [{theme: heavy_armor, w: 3}]}
+      - {id: shapeshift, icon: ability_druid_catform, text: "Shapeshifting into animals", effects: [{theme: shapeshift, w: 3}]}
+      - {id: demons, icon: spell_shadow_summonimp, text: "Enslaving demons to do my bidding", effects: [{theme: demons, w: 3}]}
 
   - id: complexity
     text: How much complexity do you want?
@@ -78,18 +86,23 @@ questions:
     type: single
     answers:
       - id: raid
+        icon: inv_misc_head_dragon_01
         text: Raiding — clearing Molten Core and beyond
         effects: [{viability: raid, w: 2}, {trait: group, w: 1}]
       - id: dungeons
+        icon: inv_misc_key_03
         text: Dungeons with friends or pugs
         effects: [{viability: dungeons, w: 2}, {trait: group, w: 1}]
       - id: pvp
+        icon: inv_bannerpvp_02
         text: PvP — battlegrounds and world PvP
         effects: [{viability: pvp, w: 2}, {trait: pvp, w: 1}, {race_tag: pvp, w: 1.5}]
       - id: solo
+        icon: inv_misc_map_01
         text: Questing, farming and exploring on my own
         effects: [{viability: leveling, w: 2}, {trait: solo, w: 1}, {race_tag: leveling, w: 1}]
       - id: mix
+        icon: inv_misc_bag_10
         text: A casual mix of everything
 
   - id: solo
@@ -191,9 +204,9 @@ questions:
     type: multi
     max: 2
     answers:
-      - {id: tall, text: "Tall and imposing", effects: [{look: tall, w: 1.5}]}
-      - {id: short, text: "Short and sturdy", effects: [{look: short, w: 1.5}]}
-      - {id: brutish, text: "Brutish and powerful", effects: [{look: brutish, w: 1.5}]}
-      - {id: elegant, text: "Graceful and elegant", effects: [{look: elegant, w: 1.5}]}
-      - {id: undead, text: "Undead and macabre", effects: [{look: undead, w: 2}]}
-      - {id: exotic, text: "Something unusual", effects: [{look: exotic, w: 1.5}]}
+      - {id: tall, icon: race_tauren_male, text: "Tall and imposing", effects: [{look: tall, w: 1.5}]}
+      - {id: short, icon: race_gnome_female, text: "Short and sturdy", effects: [{look: short, w: 1.5}]}
+      - {id: brutish, icon: race_orc_male, text: "Brutish and powerful", effects: [{look: brutish, w: 1.5}]}
+      - {id: elegant, icon: race_nightelf_female, text: "Graceful and elegant", effects: [{look: elegant, w: 1.5}]}
+      - {id: undead, icon: race_scourge_male, text: "Undead and macabre", effects: [{look: undead, w: 2}]}
+      - {id: exotic, icon: ability_druid_galewinds, text: "Something unusual", effects: [{look: exotic, w: 1.5}]}

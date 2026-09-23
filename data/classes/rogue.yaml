@@ -1,6 +1,7 @@
 id: rogue
 name: Rogue
 color: "#FFF468"
+icon: classicon_rogue
 wowhead_class_id: 4
 armor: Leather
 fantasy: >
@@ -13,6 +14,7 @@ changes:
 specs:
   - id: assassination
     name: Assassination
+    icon: ability_rogue_eviscerate
     roles: [melee]
     themes: [stealth]
     blurb: Poison-soaked burst from stealth; Forever reportedly adds Mutilate.
@@ -21,6 +23,7 @@ specs:
     racial_tags: [physical, burst, stealth, crit, hit, pvp]
   - id: combat
     name: Combat
+    icon: ability_backstab
     roles: [melee]
     themes: [weapons, stealth]
     blurb: Sword or fist brawler with Blade Flurry and Adrenaline Rush — Classic's raid rogue.
@@ -29,6 +32,7 @@ specs:
     racial_tags: [physical, burst, sword, mace, axe, hit, crit, haste]
   - id: subtlety
     name: Subtlety
+    icon: ability_stealth
     roles: [melee]
     themes: [stealth, shadow]
     blurb: Opener-focused shadow stalker; a PvP legend.

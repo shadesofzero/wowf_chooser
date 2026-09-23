@@ -1,6 +1,7 @@
 id: mage
 name: Mage
 color: "#3FC7EB"
+icon: classicon_mage
 wowhead_class_id: 8
 armor: Cloth
 fantasy: >
@@ -19,6 +20,7 @@ changes:
 specs:
   - id: arcane
     name: Arcane
+    icon: spell_holy_magicalsentry
     roles: [ranged]
     themes: [arcane]
     blurb: Utility-focused caster with Presence of Mind and Arcane Power bursts.
@@ -27,6 +29,7 @@ specs:
     racial_tags: [spell, mana, burst, crit, haste, hit]
   - id: fire
     name: Fire
+    icon: spell_fire_firebolt02
     roles: [ranged]
     themes: [arcane]
     blurb: Crit-scaling pyromaniac — a raid damage powerhouse.
@@ -35,6 +38,7 @@ specs:
     racial_tags: [spell, burst, crit, hit, haste, mana]
   - id: frost
     name: Frost
+    icon: spell_frost_frostbolt02
     roles: [ranged]
     themes: [arcane]
     blurb: Kiting, freezing and AoE-farming master; excellent leveler and PvPer.

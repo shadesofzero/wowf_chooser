@@ -1,6 +1,7 @@
 id: hunter
 name: Hunter
 color: "#AAD372"
+icon: classicon_hunter
 wowhead_class_id: 3
 armor: Mail
 fantasy: >
@@ -19,6 +20,7 @@ changes:
 specs:
   - id: beast_mastery
     name: Beast Mastery
+    icon: ability_hunter_beasttaming
     roles: [ranged]
     themes: [beasts, nature]
     blurb: Your pet does the heavy lifting — the smoothest solo and leveling experience in the game.
@@ -27,6 +29,7 @@ specs:
     racial_tags: [physical, burst, hit, crit, haste, leveling, beasts]
   - id: marksmanship
     name: Marksmanship
+    icon: ability_marksmanship
     roles: [ranged]
     themes: [weapons, beasts]
     blurb: Precision shooter with Aimed Shot and Trueshot Aura; the group-favourite hunter.
@@ -35,6 +38,7 @@ specs:
     racial_tags: [physical, burst, hit, crit, haste, pvp]
   - id: survival
     name: Survival
+    icon: ability_hunter_swiftstrike
     roles: [ranged, melee]
     themes: [nature, weapons, beasts]
     blurb: Trapper and skirmisher mixing melee, traps and ranged shots.

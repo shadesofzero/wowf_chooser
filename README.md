@@ -34,7 +34,10 @@ npm test        # build + persona sanity checks
    and `sources: [id]` pointing at `data/sources.yaml`.
 2. Run `npm test`. The build fails on unknown ids, out-of-range traits, unresolved sources, or
    a class that no race on a faction can play.
-3. Bump `data_version` and `last_reviewed` in `data/meta.yaml`.
+3. Classes, specs, races, racials and factions need an `icon:`, and answers can have one. An icon is
+   a Wowhead icon file name (e.g. `classicon_mage`). Check it exists at
+   `https://wow.zamimg.com/images/wow/icons/large/<icon>.jpg`.
+4. Bump `data_version` and `last_reviewed` in `data/meta.yaml`.
 
 Viability ratings start from Classic Era balance. They stay marked `speculative` until Forever
 content can actually be tested (the beta is currently capped at level 20).

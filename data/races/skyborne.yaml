@@ -1,5 +1,6 @@
 id: skyborne
 name: Skyborne
+icon: ability_druid_galewinds
 new_race: true
 looks: [tall, elegant, exotic]
 blurb: >
@@ -12,17 +13,17 @@ variants:
     classes: [warrior, hunter, rogue, druid, shaman]
     new_combos: []
     racials:
-      - {name: Skysight, type: active, effect: "Receive an Elemental Blessing that increases run speed by 10%.", tags: [mobility, leveling]}
+      - {name: Skysight, icon: spell_frost_windwalkon, type: active, effect: "Receive an Elemental Blessing that increases run speed by 10%.", tags: [mobility, leveling]}
   - faction: alliance
     name: High Order Skyborne
     classes: [warrior, hunter, rogue, druid, mage]
     new_combos: []
     racials:
-      - {name: Read Ley Line, type: active, effect: "Activate a ley line for 100% increased health and mana regeneration.", tags: [mana, leveling]}
+      - {name: Read Ley Line, icon: spell_arcane_arcane04, type: active, effect: "Activate a ley line for 100% increased health and mana regeneration.", tags: [mana, leveling]}
 racials:
-  - {name: Walk on Air, type: active, effect: "Glide gently downward through the air for 10 seconds.", tags: [mobility]}
-  - {name: Wind Blessed, type: passive, effect: "Melee, ranged and spell haste increased by 1%.", tags: [haste, physical, spell, healing]}
-  - {name: Elemental Insight, type: passive, effect: "Damage against Elementals increased by 5%.", tags: [leveling]}
+  - {name: Walk on Air, icon: ability_druid_flightform, type: active, effect: "Glide gently downward through the air for 10 seconds.", tags: [mobility]}
+  - {name: Wind Blessed, icon: spell_nature_windfury, type: passive, effect: "Melee, ranged and spell haste increased by 1%.", tags: [haste, physical, spell, healing]}
+  - {name: Elemental Insight, icon: inv_elemental_primal_air, type: passive, effect: "Damage against Elementals increased by 5%.", tags: [leveling]}
 racials_confidence: confirmed
 sources: [blizz-skyborne, blizz-create-hero]
 notes: "Some community sites list narrower Skyborne class options; this follows Blizzard's Skyborne announcement."

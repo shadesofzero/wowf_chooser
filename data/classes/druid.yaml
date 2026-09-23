@@ -1,6 +1,7 @@
 id: druid
 name: Druid
 color: "#FF7C0A"
+icon: classicon_druid
 wowhead_class_id: 11
 armor: Leather
 fantasy: >
@@ -19,6 +20,7 @@ changes:
 specs:
   - id: balance
     name: Balance
+    icon: spell_nature_starfall
     roles: [ranged]
     themes: [nature, shapeshift]
     blurb: Moonkin caster of arcane and nature; Forever aims to make it raid-viable.
@@ -27,6 +29,7 @@ specs:
     racial_tags: [spell, mana, crit, hit, haste]
   - id: feral
     name: Feral
+    icon: ability_racial_bearform
     roles: [melee, tank]
     themes: [shapeshift, nature, beasts]
     blurb: Bear tank or cat DPS — the ultimate hybrid, shifting mid-fight.
@@ -35,6 +38,7 @@ specs:
     racial_tags: [physical, tank, survival, stealth, mobility, hit, crit, pvp, leveling]
   - id: restoration
     name: Restoration
+    icon: spell_nature_healingtouch
     roles: [healer]
     themes: [nature, shapeshift]
     blurb: Heal-over-time healer and a slippery flag carrier in PvP.

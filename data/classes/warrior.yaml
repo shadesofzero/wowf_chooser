@@ -1,6 +1,7 @@
 id: warrior
 name: Warrior
 color: "#C69B6D"
+icon: classicon_warrior
 wowhead_class_id: 1
 armor: Plate
 fantasy: >
@@ -25,6 +26,7 @@ changes:
 specs:
   - id: arms
     name: Arms
+    icon: ability_warrior_savageblow
     roles: [melee]
     themes: [weapons, heavy_armor]
     blurb: Two-handed duelist built around big hits, Mortal Strike and battlefield control.
@@ -33,6 +35,7 @@ specs:
     racial_tags: [physical, burst, sword, axe, mace, pvp, hit, crit, survival]
   - id: fury
     name: Fury
+    icon: ability_warrior_innerrage
     roles: [melee]
     themes: [weapons, heavy_armor]
     blurb: Dual-wielding berserker — top-tier raid damage once geared.
@@ -41,6 +44,7 @@ specs:
     racial_tags: [physical, burst, sword, axe, mace, hit, crit, haste]
   - id: protection
     name: Protection
+    icon: ability_warrior_defensivestance
     roles: [tank]
     themes: [weapons, heavy_armor]
     blurb: Sword-and-board tank; the classic main tank with the deepest threat toolkit.

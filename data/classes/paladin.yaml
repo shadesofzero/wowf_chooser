@@ -1,6 +1,7 @@
 id: paladin
 name: Paladin
 color: "#F48CBA"
+icon: classicon_paladin
 wowhead_class_id: 2
 armor: Plate
 fantasy: >
@@ -31,6 +32,7 @@ changes:
 specs:
   - id: holy
     name: Holy
+    icon: spell_holy_holybolt
     roles: [healer]
     themes: [holy, heavy_armor]
     blurb: Plate-wearing single-target healer with huge, efficient heals.
@@ -39,6 +41,7 @@ specs:
     racial_tags: [healing, mana, survival, pvp, crit]
   - id: protection
     name: Protection
+    icon: spell_holy_devotionaura
     roles: [tank]
     themes: [holy, heavy_armor]
     blurb: Holy shield-bearer — reworked in Forever with a real taunt and baseline Consecration.
@@ -47,6 +50,7 @@ specs:
     racial_tags: [tank, survival, spell, mana, mace, sword]
   - id: retribution
     name: Retribution
+    icon: spell_holy_auraoflight
     roles: [melee]
     themes: [holy, weapons, heavy_armor]
     blurb: Two-handed crusader; Forever adds Holy Strike and easier seal twisting.

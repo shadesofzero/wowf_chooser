@@ -1,6 +1,7 @@
 id: warlock
 name: Warlock
 color: "#8788EE"
+icon: classicon_warlock
 wowhead_class_id: 9
 armor: Cloth
 fantasy: >
@@ -16,6 +17,7 @@ changes:
 specs:
   - id: affliction
     name: Affliction
+    icon: spell_shadow_deathcoil
     roles: [ranged]
     themes: [shadow, demons]
     blurb: Damage-over-time specialist that drains enemies dry; brutal in PvP.
@@ -24,6 +26,7 @@ specs:
     racial_tags: [spell, pvp, survival, hit, haste, leveling]
   - id: demonology
     name: Demonology
+    icon: spell_shadow_metamorphosis
     roles: [ranged]
     themes: [demons, shadow]
     blurb: Commander of demons with the sturdiest pet play in the game.
@@ -32,6 +35,7 @@ specs:
     racial_tags: [spell, survival, pvp, hit, leveling]
   - id: destruction
     name: Destruction
+    icon: spell_shadow_rainoffire
     roles: [ranged]
     themes: [shadow, demons]
     blurb: Shadow Bolt and fire nuker; top-tier raid damage.

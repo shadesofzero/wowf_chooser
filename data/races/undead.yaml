@@ -1,5 +1,6 @@
 id: undead
 name: Undead
+icon: race_scourge_male
 looks: [undead]
 blurb: The Forsaken — free-willed undead of the Undercity.
 variants:
@@ -7,9 +8,9 @@ variants:
     classes: [warrior, paladin, rogue, priest, mage, warlock]
     new_combos: [paladin]
 racials:
-  - {name: Will of the Forsaken, type: active, effect: "Removes charm, fear and sleep effects.", tags: [pvp]}
-  - {name: Cannibalize, type: active, effect: "Consume a corpse to regenerate 35% health and mana over time.", tags: [leveling, mana]}
-  - {name: Underwater Breathing, type: passive, effect: "Breathe underwater 300% longer.", tags: [leveling]}
-  - {name: Touch of the Grave, type: passive, effect: "Attacks sometimes drain health from the target.", tags: [survival, physical, spell]}
+  - {name: Will of the Forsaken, icon: spell_shadow_raisedead, type: active, effect: "Removes charm, fear and sleep effects.", tags: [pvp]}
+  - {name: Cannibalize, icon: ability_racial_cannibalize, type: active, effect: "Consume a corpse to regenerate 35% health and mana over time.", tags: [leveling, mana]}
+  - {name: Underwater Breathing, icon: spell_shadow_demonbreath, type: passive, effect: "Breathe underwater 300% longer.", tags: [leveling]}
+  - {name: Touch of the Grave, icon: spell_shadow_charm, type: passive, effect: "Attacks sometimes drain health from the target.", tags: [survival, physical, spell]}
 racials_confidence: likely
 sources: [blizz-create-hero, wowhead-combos]

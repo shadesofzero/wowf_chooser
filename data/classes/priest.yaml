@@ -1,6 +1,7 @@
 id: priest
 name: Priest
 color: "#E6E6E6"
+icon: classicon_priest
 wowhead_class_id: 5
 armor: Cloth
 fantasy: >
@@ -19,6 +20,7 @@ changes:
 specs:
   - id: discipline
     name: Discipline
+    icon: spell_holy_wordfortitude
     roles: [healer]
     themes: [holy]
     blurb: Shields, buffs and mana tricks; reportedly gains Penance in Forever.
@@ -27,6 +29,7 @@ specs:
     racial_tags: [healing, mana, spell, pvp, survival, haste]
   - id: holy
     name: Holy
+    icon: spell_holy_guardianspirit
     roles: [healer]
     themes: [holy]
     blurb: The iconic raid healer with the strongest group healing toolkit.
@@ -35,6 +38,7 @@ specs:
     racial_tags: [healing, mana, haste, crit]
   - id: shadow
     name: Shadow
+    icon: spell_shadow_shadowwordpain
     roles: [ranged]
     themes: [shadow]
     blurb: Mind-flaying damage dealer that heals itself as it fights.

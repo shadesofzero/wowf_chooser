@@ -1,6 +1,7 @@
 id: shaman
 name: Shaman
 color: "#0070DD"
+icon: classicon_shaman
 wowhead_class_id: 7
 armor: Mail
 fantasy: >
@@ -16,6 +17,7 @@ changes:
 specs:
   - id: elemental
     name: Elemental
+    icon: spell_nature_lightning
     roles: [ranged]
     themes: [elements, nature]
     blurb: Lightning-hurling caster with huge crits.
@@ -24,6 +26,7 @@ specs:
     racial_tags: [spell, mana, burst, crit, haste, hit, pvp]
   - id: enhancement
     name: Enhancement
+    icon: spell_nature_lightningshield
     roles: [melee]
     themes: [elements, weapons]
     blurb: Windfury-powered melee with spell weaving; excellent leveler.
@@ -32,6 +35,7 @@ specs:
     racial_tags: [physical, spell, burst, axe, mace, crit, hit, haste, leveling]
   - id: restoration
     name: Restoration
+    icon: spell_nature_magicimmunity
     roles: [healer]
     themes: [elements, nature]
     blurb: Chain Heal and totems — a superb group healer.

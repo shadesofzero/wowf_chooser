@@ -43,11 +43,11 @@ questions:
         effects: [{role: healer, w: 6}]
       - id: melee
         icon: inv_sword_04
-        text: "Melee damage: get up close"
+        text: "Melee damage: reach out and stab someone"
         effects: [{role: melee, w: 6}]
       - id: ranged
         icon: ability_marksmanship
-        text: "Ranged damage: fight from afar"
+        text: "Ranged damage: death from above (over there)"
         effects: [{role: ranged, w: 6}]
       - id: flex
         icon: ability_druid_catform
@@ -66,7 +66,7 @@ questions:
         effects: [{theme: holy, w: 2}, {theme: elements, w: 1.5}]
       - id: knowledge
         icon: inv_misc_book_09
-        text: "Knowledge: I read the books others were afraid to open"
+        text: "Knowledge: I have a library card, and I'm not afraid to use it. Even on the weird spooky stuff."
         effects: [{theme: arcane, w: 2}, {theme: shadow, w: 1.5}, {theme: demons, w: 1}]
       - id: land
         icon: spell_nature_protectionformnature
@@ -74,11 +74,11 @@ questions:
         effects: [{theme: nature, w: 2}, {theme: elements, w: 1.5}, {theme: beasts, w: 1}]
       - id: training
         icon: inv_sword_27
-        text: "Training: years of drills until it all became instinct"
+        text: "Training: there is nothing I cannot accomplish with my hands and a good blade"
         effects: [{theme: weapons, w: 2}, {theme: stealth, w: 1}, {theme: heavy_armor, w: 1}]
       - id: secret
         icon: spell_shadow_shadowwordpain
-        text: Something I'd rather not talk about
+        text: There are forces you cannot imagine beyond the mortal plane
         effects: [{theme: shadow, w: 2}, {theme: demons, w: 1}, {theme: stealth, w: 1}]
 
   - id: scene
@@ -91,7 +91,7 @@ questions:
         effects: [{theme: heavy_armor, w: 2}, {theme: weapons, w: 1}, {trait: survivability, w: 0.5}]
       - id: vanish
         icon: ability_stealth
-        text: Being gone before anyone realizes you were there
+        text: I wasn't here, you never saw me
         effects: [{theme: stealth, w: 2}, {theme: shapeshift, w: 1}, {trait: burst, w: 0.5}]
       - id: hunt
         icon: ability_hunter_beasttaming
@@ -99,11 +99,11 @@ questions:
         effects: [{theme: beasts, w: 2}, {theme: nature, w: 1}, {theme: weapons, w: 0.5}]
       - id: unleash
         icon: spell_fire_flamebolt
-        text: Unleashing something that should never have been unleashed
+        text: Umm, I think I might have unleashed something...
         effects: [{theme: arcane, w: 1.5}, {theme: shadow, w: 1.5}, {theme: elements, w: 1}, {theme: demons, w: 1}]
       - id: rescue
         icon: spell_holy_heal
-        text: Dragging a friend back from the brink
+        text: You're not going to die on my watch!!!
         effects: [{theme: holy, w: 1.5}, {theme: nature, w: 1}, {theme: elements, w: 1}]
 
   - id: company
@@ -141,7 +141,7 @@ questions:
       - id: medium
         text: Some depth, but nothing overwhelming
       - id: complex
-        text: Give me something to master
+        text: Give me something to master (but not like, retail, obviously)
         effects: [{trait: complexity, w: 2}]
 
   - id: content
@@ -207,7 +207,7 @@ questions:
         text: "Steady pressure: wear enemies down over time"
         effects: [{trait: burst, w: -1.5}]
       - id: either
-        text: No preference
+        text: I don't care, as long as it dies
 
   - id: survival
     text: How do you feel about dying?
@@ -220,33 +220,33 @@ questions:
         text: Glass cannon is fine if the damage is worth it
         effects: [{trait: survivability, w: -1}, {trait: burst, w: 0.5}]
       - id: either
-        text: Somewhere in between
+        text: I don't know, man, I'm just trying to take this quiz, not think about my existential dread
 
   - id: utility
-    text: Do you want to be the Swiss army knife?
+    text: Would you consider yourself a helpful person?
     type: single
     answers:
       - id: utility
         text: "Yes: buffs, crowd control, portals, resurrections"
         effects: [{trait: utility, w: 1.5}]
       - id: focused
-        text: No, let me focus on doing my job really well
+        text: "Listen, killing stuff REALLY FAST is helping"
         effects: [{trait: utility, w: -1}]
       - id: either
-        text: No strong feeling
+        text: Isn't this a video game?
 
   - id: pet
     text: How do you feel about pets?
     type: single
     answers:
       - id: love
-        text: I want a permanent companion
+        text: Love them -- I want a permanent companion
         effects: [{trait: pet, w: 2}]
       - id: no
-        text: I'd rather not manage one
+        text: No thanks -- I'd rather not manage one
         effects: [{trait: pet, w: -2}]
       - id: either
-        text: Don't care
+        text: I don't have strong feelings about animals (or anything, really)
 
   - id: novelty
     text: Do you want something new to Forever?
@@ -257,7 +257,7 @@ questions:
         text: "Yes: new combos, reworked specs, the new Skyborne race"
         effects: [{trait: forever_new, w: 1.5}, {novelty: true, w: 3}]
       - id: classic
-        text: No, I want the Classic experience I remember
+        text: No, I want the Classic experience I remember or someone told me about
         effects: [{trait: forever_new, w: -1}, {novelty: true, w: -2}]
       - id: either
         text: Either is fine

@@ -37,10 +37,10 @@ const personas = [
     expectTop: ['warlock.demonology', 'warlock.affliction'],
   },
   {
-    name: 'Tank or heal, no DPS',
-    answers: { role: ['tank', 'healer'], source: ['faith'], company: ['center'] },
-    expectTop: ['paladin.protection', 'paladin.holy', 'priest.holy', 'priest.discipline', 'shaman.restoration'],
-    expectNoRole: ['melee', 'ranged'],
+    name: 'Holy tank',
+    answers: { role: ['tank'], source: ['faith'], company: ['center'] },
+    expectTop: ['paladin.protection'],
+    expectNoRole: ['healer', 'melee', 'ranged'],
   },
 ];
 

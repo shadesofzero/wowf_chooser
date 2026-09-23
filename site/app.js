@@ -167,18 +167,20 @@ function renderResults() {
   };
 }
 
-/** Display-only notes like "Can also heal as Holy" for the other roles the player picked. */
+/** Display-only notes like "Can also heal as Holy" for every other role the class can fill. */
 function otherRoleNotes(spec, alternatives) {
   const picked = chosen(data, answers).flatMap(({ answer }) => (answer.effects || []).filter((e) => e.role).map((e) => e.role));
-  const matched = spec.roles.find((r) => picked.includes(r));
-  return [...new Set(picked)]
-    .filter((r) => r !== matched)
+  const matched = spec.roles.find((r) => picked.includes(r)) ?? spec.roles[0];
+  const notes = spec.roles.filter((r) => r !== matched).map((r) => `Can also ${ROLE_VERBS[r]} without changing spec`);
+  const others = Object.keys(ROLE_VERBS)
+    .filter((r) => !spec.roles.includes(r))
     .map((r) => {
-      if (spec.roles.includes(r)) return `Can also ${ROLE_VERBS[r]} without changing spec`;
       const specs = alternatives.map((a) => a.spec).filter((s) => s.roles.includes(r));
-      return specs.length ? `Can also ${ROLE_VERBS[r]} as ${specs.map((s) => s.name).join(' or ')}` : null;
+      return specs.length ? `${ROLE_VERBS[r]} as ${specs.map((s) => s.name).join(' or ')}` : null;
     })
     .filter(Boolean);
+  if (others.length) notes.push(`Can also ${others.join(others.length > 2 ? ', ' : ' or ').replace(/, ([^,]*)$/, ' or $1')}`);
+  return notes;
 }
 
 function resultCard({ cls, spec, reasons, alternatives }, i) {

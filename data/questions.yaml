@@ -29,9 +29,9 @@ questions:
         text: No preference. I'll go where my friends are or pick what fits best.
 
   - id: role
-    text: What do you want to do in a group?
-    help: Pick every role you'd be happy playing.
-    type: multi
+    text: What's your main role in a group?
+    help: Your results will also show what else each class can do.
+    type: single
     answers:
       - id: tank
         icon: inv_shield_06
@@ -52,7 +52,6 @@ questions:
       - id: flex
         icon: ability_druid_catform
         text: I want to be able to do a bit of everything
-        exclusive: true
         effects: [{trait: utility, w: 2}, {theme: shapeshift, w: 1}, {theme: elements, w: 1}]
 
   # The fantasy questions are deliberately indirect: every answer leans toward
@@ -265,8 +264,7 @@ questions:
 
   - id: look
     text: What should your character look like?
-    type: multi
-    max: 2
+    type: single
     answers:
       - {id: tall, icon: race_tauren_male, text: "Tall and imposing", effects: [{look: tall, w: 1.5}]}
       - {id: short, icon: race_gnome_female, text: "Short and sturdy", effects: [{look: short, w: 1.5}]}

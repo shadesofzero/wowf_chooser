@@ -39,7 +39,7 @@ traits:
   survivability:
     label: Survivability
     high: Very hard to kill
-    low: Glass cannon — trades safety for damage
+    low: "Glass cannon: trades safety for damage"
   range:
     label: Range
     high: Fights from a distance

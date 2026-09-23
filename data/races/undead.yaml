@@ -2,7 +2,7 @@ id: undead
 name: Undead
 icon: race_scourge_male
 looks: [undead]
-blurb: The Forsaken — free-willed undead of the Undercity.
+blurb: The Forsaken, free-willed undead of the Undercity.
 variants:
   - faction: horde
     classes: [warrior, paladin, rogue, priest, mage, warlock]

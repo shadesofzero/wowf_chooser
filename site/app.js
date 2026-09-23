@@ -62,9 +62,9 @@ function renderIntro() {
       </div>
       <h1>Find your class in <span class="gold">World of Warcraft: Forever</span></h1>
       <p>Answer ${data.questions.length} quick questions about the fantasy, playstyle and content you enjoy.
-      We'll recommend a class, spec and race — including the new combos and the Skyborne.</p>
+      We'll recommend a class, spec and race, including the new combos and the Skyborne.</p>
       <p class="muted">${esc(data.meta.disclaimer)}</p>
-      <button class="btn primary big" id="start">Start the quiz →</button>
+      <button class="btn primary big" id="start">Start the quiz</button>
     </section>`;
   document.getElementById('start').onclick = () => {
     started = true;
@@ -145,8 +145,8 @@ function renderResults() {
       <p class="muted">${faction ? `Showing ${esc(data.factions[faction].name)} races only. ` : ''}
       Ranked by how well each spec fits your answers.</p>
       <div class="actions">
-        <button class="btn" id="edit">✎ Change answers</button>
-        <button class="btn" id="restart">↺ Start over</button>
+        <button class="btn" id="edit">Change answers</button>
+        <button class="btn" id="restart">Start over</button>
         <button class="btn" id="share"><svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 9.5a3 3 0 0 0 4.2 0l2.4-2.4a3 3 0 0 0-4.2-4.2L8 3.8M9.5 6.5a3 3 0 0 0-4.2 0L2.9 8.9a3 3 0 0 0 4.2 4.2l.9-.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Copy share link</button>
       </div>
     </section>
@@ -277,7 +277,7 @@ async function init() {
   try {
     data = await (await fetch('data.json')).json();
   } catch {
-    app.innerHTML = '<p class="card">Could not load data.json — run <code>npm run build</code> first.</p>';
+    app.innerHTML = '<p class="card">Could not load data.json. Run <code>npm run build</code> first.</p>';
     return;
   }
   renderFooter();

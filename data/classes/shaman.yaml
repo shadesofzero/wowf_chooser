@@ -6,7 +6,7 @@ wowhead_class_id: 7
 armor: Mail
 fantasy: >
   A spiritual guide who commands earth, fire, water and air through totems.
-  Now on both factions — Dwarf Shaman and Windshaper Skyborne are new.
+  Now on both factions. Dwarf Shaman and Windshaper Skyborne are new.
 changes:
   - text: "Available to both factions (Dwarf Shaman is a new Alliance option)."
     confidence: confirmed
@@ -38,7 +38,7 @@ specs:
     icon: spell_nature_magicimmunity
     roles: [healer]
     themes: [elements, nature]
-    blurb: Chain Heal and totems — a superb group healer.
+    blurb: "Chain Heal and totems: a superb group healer."
     traits: {complexity: 2, solo: 1, group: 3, pvp: 2, survivability: 2, range: 2, utility: 3, burst: 1, pet: 0, forever_new: 1}
     viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 3, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [healing, mana, haste, crit, survival]

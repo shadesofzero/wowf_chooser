@@ -38,7 +38,7 @@ specs:
     icon: ability_warrior_innerrage
     roles: [melee]
     themes: [weapons, heavy_armor]
-    blurb: Dual-wielding berserker — top-tier raid damage once geared.
+    blurb: Dual-wielding berserker with top-tier raid damage once geared.
     traits: {complexity: 2, solo: 1, group: 3, pvp: 1, survivability: 1, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 2}
     viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [physical, burst, sword, axe, mace, hit, crit, haste]

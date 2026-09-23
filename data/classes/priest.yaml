@@ -5,7 +5,7 @@ icon: classicon_priest
 wowhead_class_id: 5
 armor: Cloth
 fantasy: >
-  A devoted healer who channels the Light — or embraces the Shadow to
+  A devoted healer who channels the Light, or embraces the Shadow to
   torment the mind. Gnome Priest is new in Forever.
 changes:
   - text: "Divine Spirit is baseline."

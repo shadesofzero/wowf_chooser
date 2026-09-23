@@ -18,15 +18,15 @@ questions:
     answers:
       - id: alliance
         icon: ui_allianceicon
-        text: Alliance — for the King!
+        text: "Alliance: for the King!"
         filter: {faction: alliance}
       - id: horde
         icon: ui_hordeicon
-        text: Horde — Lok'tar ogar!
+        text: "Horde: Lok'tar ogar!"
         filter: {faction: horde}
       - id: any
         icon: inv_misc_map_01
-        text: No preference — I'll go where my friends are or pick what fits best.
+        text: No preference. I'll go where my friends are or pick what fits best.
 
   - id: role
     text: What do you want to do in a group?
@@ -35,19 +35,19 @@ questions:
     answers:
       - id: tank
         icon: inv_shield_06
-        text: Tank — lead the charge and take the hits
+        text: "Tank: lead the charge and take the hits"
         effects: [{role: tank, w: 6}]
       - id: healer
         icon: spell_holy_heal
-        text: Heal — keep everyone alive
+        text: "Heal: keep everyone alive"
         effects: [{role: healer, w: 6}]
       - id: melee
         icon: inv_sword_04
-        text: Melee damage — get up close
+        text: "Melee damage: get up close"
         effects: [{role: melee, w: 6}]
       - id: ranged
         icon: ability_marksmanship
-        text: Ranged damage — fight from afar
+        text: "Ranged damage: fight from afar"
         effects: [{role: ranged, w: 6}]
       - id: flex
         icon: ability_druid_catform
@@ -63,19 +63,19 @@ questions:
     answers:
       - id: faith
         icon: spell_holy_holybolt
-        text: Faith — something greater than me works through my hands
+        text: "Faith: something greater than me works through my hands"
         effects: [{theme: holy, w: 2}, {theme: elements, w: 1.5}]
       - id: knowledge
         icon: inv_misc_book_09
-        text: Knowledge — I read the books others were afraid to open
+        text: "Knowledge: I read the books others were afraid to open"
         effects: [{theme: arcane, w: 2}, {theme: shadow, w: 1.5}, {theme: demons, w: 1}]
       - id: land
         icon: spell_nature_protectionformnature
-        text: The land — its spirits and creatures answer when I call
+        text: "The land: its spirits and creatures answer when I call"
         effects: [{theme: nature, w: 2}, {theme: elements, w: 1.5}, {theme: beasts, w: 1}]
       - id: training
         icon: inv_sword_27
-        text: Training — years of drills until it all became instinct
+        text: "Training: years of drills until it all became instinct"
         effects: [{theme: weapons, w: 2}, {theme: stealth, w: 1}, {theme: heavy_armor, w: 1}]
       - id: secret
         icon: spell_shadow_shadowwordpain
@@ -113,11 +113,11 @@ questions:
     answers:
       - id: companion
         icon: spell_shadow_summonimp
-        text: Never truly alone — something always walks beside me
+        text: "Never truly alone: something always walks beside me"
         effects: [{theme: beasts, w: 1.5}, {theme: demons, w: 1.5}, {trait: pet, w: 1}]
       - id: adapt
         icon: ability_druid_catform
-        text: Never the same twice — I become whatever the road demands
+        text: "Never the same twice: I become whatever the road demands"
         effects: [{theme: shapeshift, w: 1.5}, {theme: elements, w: 1}, {trait: utility, w: 1}]
       - id: lone
         icon: inv_sword_04
@@ -137,7 +137,7 @@ questions:
     type: single
     answers:
       - id: simple
-        text: Keep it simple — I want to relax
+        text: Keep it simple. I want to relax
         effects: [{trait: complexity, w: -2}]
       - id: medium
         text: Some depth, but nothing overwhelming
@@ -151,7 +151,7 @@ questions:
     answers:
       - id: raid
         icon: inv_misc_head_dragon_01
-        text: Raiding — clearing Molten Core and beyond
+        text: "Raiding: clearing Molten Core and beyond"
         effects: [{viability: raid, w: 2}, {trait: group, w: 1}]
       - id: dungeons
         icon: inv_misc_key_03
@@ -159,7 +159,7 @@ questions:
         effects: [{viability: dungeons, w: 2}, {trait: group, w: 1}]
       - id: pvp
         icon: inv_bannerpvp_02
-        text: PvP — battlegrounds and world PvP
+        text: "PvP: battlegrounds and world PvP"
         effects: [{viability: pvp, w: 2}, {trait: pvp, w: 1}, {race_tag: pvp, w: 1.5}]
       - id: solo
         icon: inv_misc_map_01
@@ -175,13 +175,13 @@ questions:
     type: single
     answers:
       - id: very
-        text: Very — I level alone and want it smooth
+        text: Very. I level alone and want it smooth
         effects: [{trait: solo, w: 2}, {race_tag: leveling, w: 0.5}]
       - id: some
-        text: Somewhat — I'll group sometimes
+        text: Somewhat. I'll group sometimes
         effects: [{trait: solo, w: 0.5}]
       - id: not
-        text: Not much — I'll be grouping most of the time
+        text: Not much. I'll be grouping most of the time
         effects: [{trait: group, w: 1}]
 
   - id: range
@@ -202,10 +202,10 @@ questions:
     type: single
     answers:
       - id: burst
-        text: Explosive bursts — line up cooldowns and delete targets
+        text: "Explosive bursts: line up cooldowns and delete targets"
         effects: [{trait: burst, w: 1.5}, {race_tag: burst, w: 0.5}]
       - id: sustained
-        text: Steady pressure — wear enemies down over time
+        text: "Steady pressure: wear enemies down over time"
         effects: [{trait: burst, w: -1.5}]
       - id: either
         text: No preference
@@ -228,10 +228,10 @@ questions:
     type: single
     answers:
       - id: utility
-        text: Yes — buffs, crowd control, portals, resurrections
+        text: "Yes: buffs, crowd control, portals, resurrections"
         effects: [{trait: utility, w: 1.5}]
       - id: focused
-        text: No — let me focus on doing my job really well
+        text: No, let me focus on doing my job really well
         effects: [{trait: utility, w: -1}]
       - id: either
         text: No strong feeling
@@ -255,10 +255,10 @@ questions:
     type: single
     answers:
       - id: new
-        text: Yes — new combos, reworked specs, the new Skyborne race
+        text: "Yes: new combos, reworked specs, the new Skyborne race"
         effects: [{trait: forever_new, w: 1.5}, {novelty: true, w: 3}]
       - id: classic
-        text: No — I want the Classic experience I remember
+        text: No, I want the Classic experience I remember
         effects: [{trait: forever_new, w: -1}, {novelty: true, w: -2}]
       - id: either
         text: Either is fine

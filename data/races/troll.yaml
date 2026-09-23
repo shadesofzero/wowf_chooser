@@ -2,7 +2,7 @@ id: troll
 name: Troll
 icon: race_troll_male
 looks: [tall, exotic]
-blurb: Darkspear jungle trolls — mystics, hunters and voodoo practitioners.
+blurb: "Darkspear jungle trolls: mystics, hunters and voodoo practitioners."
 variants:
   - faction: horde
     classes: [warrior, hunter, rogue, priest, shaman, mage, warlock]

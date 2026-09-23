@@ -32,7 +32,7 @@ specs:
     icon: ability_racial_bearform
     roles: [melee, tank]
     themes: [shapeshift, nature, beasts]
-    blurb: Bear tank or cat DPS — the ultimate hybrid, shifting mid-fight.
+    blurb: Bear tank or cat DPS. The ultimate hybrid, shifting mid-fight.
     traits: {complexity: 3, solo: 3, group: 2, pvp: 3, survivability: 3, range: 0, utility: 3, burst: 2, pet: 0, forever_new: 2}
     viability: {leveling: 5, dungeons: 4, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [physical, tank, survival, stealth, mobility, hit, crit, pvp, leveling]

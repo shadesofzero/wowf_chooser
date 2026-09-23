@@ -44,7 +44,7 @@ specs:
     icon: spell_holy_devotionaura
     roles: [tank]
     themes: [holy, heavy_armor]
-    blurb: Holy shield-bearer — reworked in Forever with a real taunt and baseline Consecration.
+    blurb: Holy shield-bearer, reworked in Forever with a real taunt and baseline Consecration.
     traits: {complexity: 2, solo: 2, group: 3, pvp: 1, survivability: 3, range: 0, utility: 2, burst: 0, pet: 0, forever_new: 3}
     viability: {leveling: 3, dungeons: 4, raid: 3, pvp: 2, confidence: speculative, sources: [lfcarry-classes, mobalytics-explained]}
     racial_tags: [tank, survival, spell, mana, mace, sword]

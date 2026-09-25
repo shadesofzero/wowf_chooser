@@ -11,7 +11,10 @@ changes:
   - text: "Improved Mark of the Wild is baseline."
     confidence: confirmed
     sources: [mobalytics-explained]
-  - text: "Reported: Mangle for cat and bear, Eclipse for Balance, Wild Growth for Restoration, baseline Omen of Clarity, stronger bear tools and weapon scaling."
+  - text: "Primal Bite (formerly Mangle) for cat and bear, and Wild Growth for Restoration. Wrath deals about 50% more base damage."
+    confidence: confirmed
+    sources: [blizz-beta-notes-0924]
+  - text: "Reported: Eclipse for Balance, baseline Omen of Clarity, stronger bear tools and weapon scaling."
     confidence: speculative
     sources: [expcarry-changes]
   - text: "Skyborne of both factions can be Druids, with unique druid forms."

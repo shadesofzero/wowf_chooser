@@ -11,7 +11,13 @@ changes:
   - text: "Available to both factions (Dwarf Shaman is a new Alliance option)."
     confidence: confirmed
     sources: [blizz-create-hero, classicwow-changes]
-  - text: "Reported additions: earlier Stormstrike and Maelstrom Weapon (Enhancement), Lava Burst (Elemental), Water Shield and Riptide (Restoration), totem QoL."
+  - text: "Lava Burst (Elemental) and Riptide (Restoration) are in the game. Lightning Bolt and early Lava Burst ranks were buffed in beta."
+    confidence: confirmed
+    sources: [blizz-beta-notes-0924]
+  - text: "Flametongue and Windfury/Grace of Air/Tranquil Air totems no longer stack with each other, and Flametongue Totem no longer stacks with Flametongue Weapon."
+    confidence: confirmed
+    sources: [blizz-beta-notes-0924]
+  - text: "Reported additions: earlier Stormstrike and Maelstrom Weapon (Enhancement), Water Shield (Restoration), totem QoL."
     confidence: speculative
     sources: [expcarry-changes]
 specs:

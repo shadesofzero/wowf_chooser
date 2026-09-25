@@ -8,9 +8,9 @@ fantasy: >
   A holy warrior wielding the Light to heal allies, shield the weak and smite
   the wicked. Now open to the Horde through the new Undead Paladin.
 changes:
-  - text: "Holy Strike: new instant Holy weapon strike on a 12s cooldown, learned at level 6."
-    confidence: likely
-    sources: [lfcarry-classes]
+  - text: "Holy Strike: new instant Holy weapon strike on a 10s cooldown, learned at level 6."
+    confidence: confirmed
+    sources: [lfcarry-classes, blizz-beta-notes-0924]
   - text: "Judgement no longer consumes the active Seal."
     confidence: likely
     sources: [lfcarry-classes]
@@ -20,9 +20,12 @@ changes:
   - text: "Consecration is baseline at level 20."
     confidence: likely
     sources: [lfcarry-classes]
-  - text: "Spec talents: Light's Vigil (Holy), Swift Judgement (Protection), Twist of Light (Retribution seal twisting)."
+  - text: "Spec talents: Light's Vigil (Holy), Swift Judgement (Protection), Twist of Light (Retribution seal twisting; also makes Seals cost 20% less mana)."
     confidence: likely
-    sources: [lfcarry-classes]
+    sources: [lfcarry-classes, blizz-beta-notes-0924]
+  - text: "Righteous Fury's Holy threat bonus is 60% (Classic Era: 90%)."
+    confidence: confirmed
+    sources: [blizz-beta-notes-0924]
   - text: "Blessing of Kings is baseline. Paladins still have no interrupt and no slow."
     confidence: likely
     sources: [mobalytics-explained, lfcarry-classes]

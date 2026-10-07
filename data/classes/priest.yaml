@@ -8,12 +8,15 @@ fantasy: >
   A devoted healer who channels the Light, or embraces the Shadow to
   torment the mind. Gnome Priest is new in Forever.
 changes:
-  - text: "Divine Spirit is baseline."
+  - text: "Fear Ward and Devouring Plague are available to every Priest at level 20. Divine Spirit is baseline at 30 and Shadow Word: Death at 32."
     confidence: confirmed
-    sources: [mobalytics-explained]
-  - text: "Reported additions: Penance (Discipline), Binding Heal, Prayer of Mending (Holy); Fear Ward and Devouring Plague no longer race-locked."
-    confidence: speculative
-    sources: [expcarry-changes]
+    sources: [blizz-deepdive-priest-warrior, mobalytics-explained]
+  - text: "Discipline gains Penance and Renewed Hope; Holy gains Binding Heal and Prayer of Mending."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior]
+  - text: "Shadowform halves mana costs and doubles crit damage. Vampiric Embrace lasts 30s on a 1-minute cooldown, and Devouring Contagion spreads Devouring Plague when targets die."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior, wowhead-datamine-1001]
   - text: "Gnome Priest is a new Alliance combination."
     confidence: confirmed
     sources: [blizz-create-hero]
@@ -23,9 +26,9 @@ specs:
     icon: spell_holy_wordfortitude
     roles: [healer]
     themes: [holy]
-    blurb: Shields, buffs and mana tricks; reportedly gains Penance in Forever.
+    blurb: Shields, buffs and mana tricks, now with Penance.
     traits: {complexity: 2, solo: 1, group: 3, pvp: 2, survivability: 2, range: 2, utility: 3, burst: 1, pet: 0, forever_new: 2}
-    viability: {leveling: 2, dungeons: 4, raid: 4, pvp: 3, confidence: speculative, sources: [classic-baseline, expcarry-changes]}
+    viability: {leveling: 2, dungeons: 4, raid: 4, pvp: 3, confidence: speculative, sources: [classic-baseline, blizz-deepdive-priest-warrior]}
     racial_tags: [healing, mana, spell, pvp, survival, haste]
   - id: holy
     name: Holy

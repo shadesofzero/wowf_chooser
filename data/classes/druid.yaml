@@ -14,9 +14,12 @@ changes:
   - text: "Primal Bite (formerly Mangle) for cat and bear, and Wild Growth for Restoration. Wrath deals about 50% more base damage."
     confidence: confirmed
     sources: [blizz-beta-notes-0924]
-  - text: "Reported: Eclipse for Balance, baseline Omen of Clarity, stronger bear tools and weapon scaling."
-    confidence: speculative
-    sources: [expcarry-changes]
+  - text: "Baseline Omen of Clarity, Nature's Grasp, Lacerate and an out-of-combat resurrection (Revive). Potions, racials and weapon enchants work in forms, and forms are immune to Disarm."
+    confidence: confirmed
+    sources: [blizz-deepdive-hunter-druid, blizz-beta-notes-1001]
+  - text: "Feral: Tiger's Fury is replaced by Shifting Power (mana into 40 Energy); Berserk is the capstone. Balance: Insect Swarm, Eclipse and a haste-based Nature's Grace. Restoration: Swiftmend no longer consumes your HoT."
+    confidence: confirmed
+    sources: [blizz-deepdive-hunter-druid, blizz-beta-notes-1001]
   - text: "Skyborne of both factions can be Druids, with unique druid forms."
     confidence: confirmed
     sources: [blizz-skyborne]
@@ -36,7 +39,7 @@ specs:
     roles: [melee, tank]
     themes: [shapeshift, nature, beasts]
     blurb: Bear tank or cat DPS. The ultimate hybrid, shifting mid-fight.
-    traits: {complexity: 3, solo: 3, group: 2, pvp: 3, survivability: 3, range: 0, utility: 3, burst: 2, pet: 0, forever_new: 2}
+    traits: {complexity: 3, solo: 3, group: 2, pvp: 3, survivability: 3, range: 0, utility: 3, burst: 2, pet: 0, forever_new: 3}
     viability: {leveling: 5, dungeons: 4, raid: 3, pvp: 4, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [physical, tank, survival, stealth, mobility, hit, crit, pvp, leveling]
   - id: restoration

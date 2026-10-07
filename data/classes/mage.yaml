@@ -8,7 +8,13 @@ fantasy: >
   A scholar of the arcane who wields fire and frost, conjures food and water,
   and opens portals. Orc Mage is new in Forever.
 changes:
-  - text: "Reported: proc-based Arcane, deeper Fire crit/Pyroblast interactions, more reliable frozen-target bonuses, and a new research/scroll knowledge system."
+  - text: "Fire: Heating Up (formerly Hot Streak). Crits from Fireball, Frostfire Bolt, Fire Blast and Scorch each cut your next Pyroblast's cast time by 25%, stacking 3 times. Combustion has 3 charges."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1001, wowhead-datamine-1001]
+  - text: "A Research system teaches castable Comprehension scrolls (these can't be cast while moving)."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1001]
+  - text: "Reported: proc-based Arcane and more reliable frozen-target bonuses."
     confidence: speculative
     sources: [expcarry-changes]
   - text: "Orc Mage is a new Horde combination; High Order Skyborne can be Mages."

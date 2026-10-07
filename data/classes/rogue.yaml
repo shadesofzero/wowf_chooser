@@ -8,7 +8,10 @@ fantasy: >
   A cunning assassin who strikes from the shadows with poisoned blades,
   picks locks and pockets, and controls fights with stuns.
 changes:
-  - text: "Assassination gains Mutilate and Venom; Combat gains Restless Blades and Hack and Slash (merged weapon specializations)."
+  - text: "Energy regenerates continuously. Assassination gains Mutilate (strikes with both weapons) and Venom (a finisher that boosts poison damage). Combat gains Hack and Slash (merged weapon specializations). Subtlety's Cutthroat allows Ambush outside stealth."
+    confidence: confirmed
+    sources: [wowhead-highlights-war-rog-sham, wowhead-datamine-1001]
+  - text: "Reported: Combat also gains Restless Blades."
     confidence: speculative
     sources: [expcarry-changes]
 specs:
@@ -17,7 +20,7 @@ specs:
     icon: ability_rogue_eviscerate
     roles: [melee]
     themes: [stealth]
-    blurb: Poison-soaked burst from stealth; Forever reportedly adds Mutilate.
+    blurb: Poison-soaked burst from stealth, now with Mutilate and Venom.
     traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 1, range: 0, utility: 1, burst: 3, pet: 0, forever_new: 2}
     viability: {leveling: 3, dungeons: 4, raid: 4, pvp: 3, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [physical, burst, stealth, crit, hit, pvp]

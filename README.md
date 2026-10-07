@@ -40,7 +40,7 @@ npm test        # build + persona sanity checks
 4. Bump `data_version` and `last_reviewed` in `data/meta.yaml`.
 
 Viability ratings start from Classic Era balance. They stay marked `speculative` until Forever
-content can actually be tested (the beta is currently capped at level 20).
+content can actually be tested (the beta is currently capped at level 30).
 
 ## How scoring works
 

@@ -59,3 +59,28 @@ wowclassicforever-races:
   url: https://wowclassicforever.info/races/
   accessed: 2026-09-23
   reliability: community
+wowhead-highlights-war-rog-sham:
+  title: "Class Highlights for Warriors, Rogues and Shamans in WoW: Forever (Wowhead)"
+  url: https://www.wowhead.com/forever/news/class-highlights-for-warriors-rogues-and-shamans-in-wow-forever-383189
+  accessed: 2026-10-07
+  reliability: official
+blizz-deepdive-hunter-druid:
+  title: "World of Warcraft: Forever Class Deep Dives — Hunter and Druid (Blizzard, via Wowhead Blue Tracker)"
+  url: https://www.wowhead.com/forever/blue-tracker/news/us/world-of-warcraft-forever-class-deep-dives-hunter-and-druid-world-of-warcraft-24301515
+  accessed: 2026-10-07
+  reliability: official
+blizz-deepdive-priest-warrior:
+  title: "World of Warcraft: Forever Class Deep Dives — Priest and Warrior (Blizzard, via Wowhead Blue Tracker)"
+  url: https://www.wowhead.com/forever/blue-tracker/news/us/world-of-warcraft-forever-class-deep-dives-priest-and-warrior-world-of-warcraft-24301514
+  accessed: 2026-10-07
+  reliability: official
+blizz-beta-notes-1001:
+  title: "Level 30 Now Available – Forever Beta Patch Notes (Wowhead)"
+  url: https://www.wowhead.com/forever/news/level-30-now-available-forever-beta-patch-notes-383217
+  accessed: 2026-10-07
+  reliability: official
+wowhead-datamine-1001:
+  title: "Datamined Class Changes for WoW: Forever Build on October 1st (Wowhead)"
+  url: https://www.wowhead.com/forever/news/datamined-class-changes-for-wow-forever-build-on-october-1st-383219
+  accessed: 2026-10-07
+  reliability: datamine

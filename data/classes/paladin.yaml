@@ -20,12 +20,15 @@ changes:
   - text: "Consecration is baseline at level 20."
     confidence: likely
     sources: [lfcarry-classes]
-  - text: "Spec talents: Light's Vigil (Holy), Swift Judgement (Protection), Twist of Light (Retribution seal twisting; also makes Seals cost 20% less mana)."
+  - text: "Spec talents: Light's Vigil (Holy), Swift Judgement (Protection), Twist of Light (Retribution: swapping Seals leaves an Echo that your next swing applies; Seals cost 20% less mana)."
     confidence: likely
     sources: [lfcarry-classes, blizz-beta-notes-0924]
   - text: "Righteous Fury's Holy threat bonus is 60% (Classic Era: 90%)."
     confidence: confirmed
     sources: [blizz-beta-notes-0924]
+  - text: "Holy Shield gives 30% block chance. With a shield equipped, Seal of Fury hits also grant an absorb shield."
+    confidence: likely
+    sources: [blizz-beta-notes-1001, wowhead-datamine-1001]
   - text: "Blessing of Kings is baseline. Paladins still have no interrupt and no slow."
     confidence: likely
     sources: [mobalytics-explained, lfcarry-classes]

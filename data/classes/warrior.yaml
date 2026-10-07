@@ -8,15 +8,18 @@ fantasy: >
   A master of arms who charges headlong into battle, fuelled by rage.
   Gear-hungry and slow to level, but the backbone of every raid.
 changes:
-  - text: "Arms gains Spearing Strike, Bloodthrill (Overpower on Rend targets) and Weaponmaster; weapon specialization talents removed."
-    confidence: likely
-    sources: [foreverchanges]
-  - text: "Fury gains Boundless Rage (+10 max rage) and Raging Blows (off-hand Whirlwind strikes, cheaper Cleave)."
-    confidence: likely
-    sources: [foreverchanges]
-  - text: "Protection gains Master of Defense (rage from dodge/parry), Vanguard (Charge in Defensive Stance) and Focused Rage."
-    confidence: likely
-    sources: [foreverchanges]
+  - text: "Baseline Tactical Mastery (level 14) and Victory Rush (level 20). Rage is normalized to weapon speed and crits give 75% more. Shield Wall, Recklessness and Retaliation no longer share a cooldown."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior, blizz-beta-notes-1001]
+  - text: "Arms gains Spearing Strike (Battle Stance, any weapon), Bloodthrill (Overpower on Rend targets) and Weaponmaster; weapon specialization talents removed."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior, wowhead-highlights-war-rog-sham, blizz-beta-notes-1001]
+  - text: "Fury gains Boundless Rage, Precision and Raging Blows (off-hand Whirlwind strikes, cheaper Cleave). Bloodthirst no longer heals; it grants movement speed instead."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior, wowhead-highlights-war-rog-sham]
+  - text: "Protection gains Master of Defense (rage from dodge/parry), Vanguard (Charge in Defensive Stance), Bastion and Focused Rage. Thunder Clap works in Defensive Stance."
+    confidence: confirmed
+    sources: [blizz-deepdive-priest-warrior, wowhead-highlights-war-rog-sham]
   - text: "Improved Battle Shout is now baseline."
     confidence: confirmed
     sources: [mobalytics-explained]

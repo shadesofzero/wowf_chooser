@@ -1,8 +1,9 @@
 # Bump data_version whenever facts change so the site footer shows it.
-data_version: 0.2.0
-last_reviewed: 2026-10-07
-game_phase: "Beta (Sep 17 – Oct 21, 2026), level 30 cap; launch Nov 4, 2026"
+data_version: 0.3.0
+last_reviewed: 2026-10-24
+game_phase: "Beta ended Oct 23, 2026 (final build Oct 15, level 30 cap); launch Nov 4, 2026"
 disclaimer: >
-  WoW Forever is still in beta. Class, race and balance details can change.
+  WoW Forever launches Nov 4, 2026; the beta has ended, but class, race and
+  balance details can still change before and after launch.
   Viability ratings start from the Classic Era baseline and are adjusted only
   where Forever changes are known.

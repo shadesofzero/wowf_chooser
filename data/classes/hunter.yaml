@@ -14,6 +14,12 @@ changes:
   - text: "Beast Mastery: Focused Fire and Summon Hawk (up to 2 Hawks). Marksmanship: Lone Wolf (+20% damage with no pet), Careful Aim (Attack Power from Intellect) and a 45-yard Sniper Shot capstone. Survival: Strider Kick, Expose Prey and bleeding Mongoose Bites (Lacerating Strikes)."
     confidence: confirmed
     sources: [blizz-deepdive-hunter-druid, blizz-beta-notes-1001]
+  - text: "Trueshot Aura is raid-wide, and you can keep one Fire Trap and one Ice Trap out at once. Auto Shot (and wands) need you to stand still for 0.5s before firing. Survival's Expose Prey lasts 10s."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1008, blizz-beta-notes-1015]
+  - text: "Pet utility nerfed: Crocolisk Dismember, Bat Sonic Blast and Bird of Prey Mine! have weaker effects and longer cooldowns."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1015, wowhead-hunter-pet-nerfs]
   - text: "Human Hunter is a new Alliance combination."
     confidence: confirmed
     sources: [blizz-create-hero]

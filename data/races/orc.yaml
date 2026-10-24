@@ -8,9 +8,9 @@ variants:
     classes: [warrior, hunter, rogue, shaman, mage, warlock]
     new_combos: [mage]
 racials:
-  - {name: Blood Fury, icon: ability_racial_bloodrage, type: active, effect: "Attack power and spell power increased by 10% for 15 seconds.", tags: [burst, physical, spell]}
-  - {name: Shatter Curse, icon: spell_holy_removecurse, type: active, effect: "Immunity to curses and banes and reduced magical damage taken for 8 seconds.", tags: [survival, pvp]}
-  - {name: Axe Specialization, icon: inv_axe_02, type: passive, effect: "Axes increase spell and ability critical strike chance by 1%.", tags: [axe]}
+  - {name: Blood Fury, icon: ability_racial_bloodrage, type: active, effect: "Attack power and spell power increased by 10% for 15 seconds. 3-minute cooldown.", tags: [burst, physical, spell]}
+  - {name: Shatter Curse, icon: spell_holy_removecurse, type: active, effect: "Dispels curses and banes and reduces magic damage taken by 5% for 8 seconds.", tags: [survival, pvp]}
+  - {name: Savage, icon: racial_orc_berserkerstrength, type: passive, effect: "Critical strike chance increased by 1%.", tags: [crit]}
   - {name: Hardiness, icon: inv_helmet_23, type: passive, effect: "Stun durations reduced by 20%.", tags: [pvp]}
 racials_confidence: likely
-sources: [blizz-create-hero, wowhead-combos]
+sources: [blizz-create-hero, wowhead-combos, blizz-beta-notes-1015]

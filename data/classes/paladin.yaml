@@ -23,9 +23,12 @@ changes:
   - text: "Spec talents: Light's Vigil (Holy), Swift Judgement (Protection), Twist of Light (Retribution: swapping Seals leaves an Echo that your next swing applies; Seals cost 20% less mana)."
     confidence: likely
     sources: [lfcarry-classes, blizz-beta-notes-0924]
-  - text: "Righteous Fury's Holy threat bonus is 60% (Classic Era: 90%)."
+  - text: "Righteous Fury's Holy threat bonus is back to 90% after a beta drop to 60%, but Consecration's spell power scaling was more than halved, so Protection is no longer the standout AoE tank."
     confidence: confirmed
-    sources: [blizz-beta-notes-0924]
+    sources: [blizz-beta-notes-1015, wowhead-prot-paladin-state]
+  - text: "Salvation and Mass Salvation replace Blessing of Salvation and no longer compete with other blessings; Revoke removes them."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1015]
   - text: "Holy Shield gives 30% block chance. With a shield equipped, Seal of Fury hits also grant an absorb shield."
     confidence: likely
     sources: [blizz-beta-notes-1001, wowhead-datamine-1001]
@@ -50,10 +53,10 @@ specs:
     icon: spell_holy_devotionaura
     roles: [tank]
     themes: [holy, heavy_armor]
-    blurb: Holy shield-bearer, reworked in Forever with a real taunt and baseline Consecration.
+    blurb: Holy shield-bearer, reworked in Forever with a real taunt and baseline Consecration, though late-beta nerfs cut its AoE niche.
     traits: {complexity: 2, solo: 2, group: 3, pvp: 1, survivability: 3, range: 0, utility: 2, burst: 0, pet: 0, forever_new: 3}
     viability: {leveling: 3, dungeons: 4, raid: 3, pvp: 2, confidence: speculative, sources: [lfcarry-classes, mobalytics-explained]}
-    racial_tags: [tank, survival, spell, mana, mace, sword]
+    racial_tags: [tank, survival, spell, mana]
   - id: retribution
     name: Retribution
     icon: spell_holy_auraoflight
@@ -62,4 +65,4 @@ specs:
     blurb: Two-handed crusader; Forever adds Holy Strike and easier seal twisting.
     traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 3, range: 0, utility: 2, burst: 2, pet: 0, forever_new: 3}
     viability: {leveling: 4, dungeons: 3, raid: 3, pvp: 3, confidence: speculative, sources: [lfcarry-classes, classic-baseline]}
-    racial_tags: [physical, spell, burst, sword, mace, axe, crit, hit, survival]
+    racial_tags: [physical, spell, burst, crit, hit, survival]

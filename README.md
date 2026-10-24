@@ -3,7 +3,7 @@
 A static quiz that recommends a **class, spec and race** for *World of Warcraft: Forever*
 (Classic+), with links out to Wowhead guides. Hosted on GitHub Pages.
 
-WoW Forever is still in beta, so every game fact lives in `data/` as YAML, with sources
+WoW Forever is still settling (the beta ended Oct 23, 2026; launch is Nov 4), so every game fact lives in `data/` as YAML, with sources
 and confidence levels. Update the data and rebuild, and the site regenerates.
 
 ## Quick start
@@ -40,7 +40,7 @@ npm test        # build + persona sanity checks
 4. Bump `data_version` and `last_reviewed` in `data/meta.yaml`.
 
 Viability ratings start from Classic Era balance. They stay marked `speculative` until Forever
-content can actually be tested (the beta is currently capped at level 30).
+content can actually be tested (the beta was capped at level 30).
 
 ## How scoring works
 

@@ -20,9 +20,12 @@ changes:
   - text: "Protection gains Master of Defense (rage from dodge/parry), Vanguard (Charge in Defensive Stance), Bastion and Focused Rage. Thunder Clap works in Defensive Stance."
     confidence: confirmed
     sources: [blizz-deepdive-priest-warrior, wowhead-highlights-war-rog-sham]
-  - text: "Improved Battle Shout is now baseline."
+  - text: "Improved Battle Shout is baseline and Battle Shout is now raid-wide. Slam is no longer pushed back by damage."
     confidence: confirmed
-    sources: [mobalytics-explained]
+    sources: [mobalytics-explained, blizz-beta-notes-1015]
+  - text: "Rage-from-damage bugs fixed and rebalanced for questing armor levels, so Warriors gain more Rage while leveling."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1008]
   - text: "Reported as the slowest class to level (~12% slower than average)."
     confidence: speculative
     sources: [lfcarry-classes]
@@ -35,7 +38,7 @@ specs:
     blurb: Two-handed duelist built around big hits, Mortal Strike and battlefield control.
     traits: {complexity: 2, solo: 1, group: 2, pvp: 3, survivability: 2, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 2}
     viability: {leveling: 3, dungeons: 3, raid: 3, pvp: 5, confidence: speculative, sources: [classic-baseline]}
-    racial_tags: [physical, burst, sword, axe, mace, pvp, hit, crit, survival]
+    racial_tags: [physical, burst, pvp, hit, crit, survival]
   - id: fury
     name: Fury
     icon: ability_warrior_innerrage
@@ -44,7 +47,7 @@ specs:
     blurb: Dual-wielding berserker with top-tier raid damage once geared.
     traits: {complexity: 2, solo: 1, group: 3, pvp: 1, survivability: 1, range: 0, utility: 1, burst: 2, pet: 0, forever_new: 2}
     viability: {leveling: 2, dungeons: 4, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
-    racial_tags: [physical, burst, sword, axe, mace, hit, crit, haste]
+    racial_tags: [physical, burst, hit, crit, haste]
   - id: protection
     name: Protection
     icon: ability_warrior_defensivestance
@@ -53,4 +56,4 @@ specs:
     blurb: Sword-and-board tank; the classic main tank with the deepest threat toolkit.
     traits: {complexity: 3, solo: 1, group: 3, pvp: 1, survivability: 3, range: 0, utility: 2, burst: 0, pet: 0, forever_new: 2}
     viability: {leveling: 2, dungeons: 5, raid: 5, pvp: 2, confidence: speculative, sources: [classic-baseline]}
-    racial_tags: [tank, survival, physical, hit, sword, axe, mace]
+    racial_tags: [tank, survival, physical, hit]

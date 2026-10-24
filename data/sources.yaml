@@ -84,3 +84,28 @@ wowhead-datamine-1001:
   url: https://www.wowhead.com/forever/news/datamined-class-changes-for-wow-forever-build-on-october-1st-383219
   accessed: 2026-10-07
   reliability: datamine
+blizz-beta-notes-1008:
+  title: "WoW Forever Beta Development Notes – October 8 build (Blizzard Forums)"
+  url: https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes/631316/5
+  accessed: 2026-10-24
+  reliability: official
+blizz-beta-notes-1015:
+  title: "WoW Forever Beta Development Notes – October 15 build: racial and class changes (Blizzard Forums)"
+  url: https://eu.forums.blizzard.com/en/wow/t/wow-forever-beta-development-notes/631316/6
+  accessed: 2026-10-24
+  reliability: official
+wowhead-hunter-pet-nerfs:
+  title: "Some Powerful Hunter Pet Abilities Nerfed in WoW: Forever (Wowhead)"
+  url: https://www.wowhead.com/forever/news=383460/some-powerful-hunter-pet-abilities-nerfed-in-wow-forever
+  accessed: 2026-10-24
+  reliability: datamine
+wowhead-prot-paladin-state:
+  title: "The Current State of Protection Paladins in WoW: Forever (Wowhead)"
+  url: https://www.wowhead.com/forever/news=383487/the-current-state-of-protection-paladins-in-wow-forever
+  accessed: 2026-10-24
+  reliability: community
+wowhead-beta-over:
+  title: "World Bosses, Legendaries, and a Scourge Invasion - The WoW: Forever Beta is Over (Wowhead)"
+  url: https://www.wowhead.com/forever/news=383554/world-bosses-legendaries-and-a-scourge-invasion-the-wow-forever-beta-is-over
+  accessed: 2026-10-24
+  reliability: community

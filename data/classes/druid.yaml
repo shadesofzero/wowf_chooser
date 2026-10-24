@@ -20,6 +20,9 @@ changes:
   - text: "Feral: Tiger's Fury is replaced by Shifting Power (mana into 40 Energy); Berserk is the capstone. Balance: Insect Swarm, Eclipse and a haste-based Nature's Grace. Restoration: Swiftmend no longer consumes your HoT."
     confidence: confirmed
     sources: [blizz-deepdive-hunter-druid, blizz-beta-notes-1001]
+  - text: "Bear and Dire Bear Form threat bonus raised to 50% and Rage from crits to 100%; Moonkin Aura (spell crit) and Leader of the Pack (melee/ranged crit) are now raid-wide."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1008, blizz-beta-notes-1015]
   - text: "Skyborne of both factions can be Druids, with unique druid forms."
     confidence: confirmed
     sources: [blizz-skyborne]

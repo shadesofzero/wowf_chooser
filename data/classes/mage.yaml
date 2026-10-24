@@ -14,9 +14,12 @@ changes:
   - text: "A Research system teaches castable Comprehension scrolls (these can't be cast while moving)."
     confidence: confirmed
     sources: [blizz-beta-notes-1001]
-  - text: "Reported: proc-based Arcane and more reliable frozen-target bonuses."
-    confidence: speculative
-    sources: [expcarry-changes]
+  - text: "Arcane: Arcane Blast now stacks bonus Spell Damage from Intellect for 15s, Missile Barrage is a first-row proc talent, and Arcane Wrath (scales with max mana) is the 16-point talent."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1015]
+  - text: "Frost Blast (level 24) replaces rank-1 Frostbolt as the slow. Fire Power now scales with your Fire effects on the target and Critical Mass goes to 10%. Winter's Chill now empowers Cone of Cold instead of adding crit; Ice Lance deals 200% more to Frozen targets (was 300%)."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1015]
   - text: "Orc Mage is a new Horde combination; High Order Skyborne can be Mages."
     confidence: confirmed
     sources: [blizz-create-hero, blizz-skyborne]
@@ -29,8 +32,8 @@ specs:
     icon: spell_holy_magicalsentry
     roles: [ranged]
     themes: [arcane]
-    blurb: Utility-focused caster with Presence of Mind and Arcane Power bursts.
-    traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 1, range: 3, utility: 3, burst: 2, pet: 0, forever_new: 2}
+    blurb: Mana-hungry caster that ramps Arcane Blast stacks, with Missile Barrage procs and Arcane Power bursts.
+    traits: {complexity: 2, solo: 2, group: 2, pvp: 2, survivability: 1, range: 3, utility: 3, burst: 2, pet: 0, forever_new: 3}
     viability: {leveling: 3, dungeons: 3, raid: 3, pvp: 3, confidence: speculative, sources: [classic-baseline]}
     racial_tags: [spell, mana, burst, crit, haste, hit]
   - id: fire

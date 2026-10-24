@@ -14,9 +14,12 @@ changes:
   - text: "Discipline gains Penance and Renewed Hope; Holy gains Binding Heal and Prayer of Mending."
     confidence: confirmed
     sources: [blizz-deepdive-priest-warrior]
-  - text: "Shadowform halves mana costs and doubles crit damage. Vampiric Embrace lasts 30s on a 1-minute cooldown, and Devouring Contagion spreads Devouring Plague when targets die."
+  - text: "Shadowform halves mana costs and doubles crit damage. Vampiric Embrace has a 30s cooldown, Devouring Contagion spreads Devouring Plague to 2 targets, and Dark Inspiration boosts your party's Spirit."
     confidence: confirmed
-    sources: [blizz-deepdive-priest-warrior, wowhead-datamine-1001]
+    sources: [blizz-deepdive-priest-warrior, wowhead-datamine-1001, blizz-beta-notes-1015]
+  - text: "Devouring Plague's cooldown dropped to 24s (was 1 minute); Shadow Word: Death's rose to 18s. Penance was retuned to be more mana-efficient than Heal."
+    confidence: confirmed
+    sources: [blizz-beta-notes-1008, blizz-beta-notes-1015]
   - text: "Gnome Priest is a new Alliance combination."
     confidence: confirmed
     sources: [blizz-create-hero]

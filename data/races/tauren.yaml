@@ -8,9 +8,9 @@ variants:
     classes: [warrior, hunter, shaman, druid]
     new_combos: []
 racials:
-  - {name: War Stomp, icon: ability_warstomp, type: active, effect: "Stuns nearby enemies for 2 seconds.", tags: [pvp, survival, tank]}
-  - {name: Cultivation, icon: inv_misc_flower_02, type: active, effect: "Grow bonus herbs that anyone can gather.", tags: [leveling]}
-  - {name: Plainsrunning, icon: ability_druid_dash, type: passive, effect: "Movement speed increases the longer you keep moving.", tags: [mobility, leveling]}
-  - {name: Endurance, icon: spell_nature_unyeildingstamina, type: passive, effect: "Health increased by 5% and hit chance by 1%.", tags: [survival, tank, hit]}
+  - {name: War Stomp, icon: ability_warstomp, type: active, effect: "Stuns nearby enemies for 2 seconds. 90-second cooldown.", tags: [pvp, survival, tank]}
+  - {name: Cultivation, icon: inv_misc_flower_02, type: active, effect: "Grow bonus herbs that anyone can gather (15-minute cooldown).", tags: [leveling]}
+  - {name: Plainsrunning, icon: ability_druid_dash, type: passive, effect: "Movement speed increases the longer you keep moving; also +3% mounted speed.", tags: [mobility, leveling]}
+  - {name: Endurance, icon: spell_nature_unyeildingstamina, type: passive, effect: "Health increased by 5% and critical strike damage and healing by 2%.", tags: [survival, tank, crit, healing]}
 racials_confidence: likely
-sources: [blizz-create-hero, wowhead-combos]
+sources: [blizz-create-hero, wowhead-combos, blizz-beta-notes-1015]

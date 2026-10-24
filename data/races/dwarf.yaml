@@ -9,8 +9,8 @@ variants:
     new_combos: [shaman]
 racials:
   - {name: Stoneform, icon: spell_shadow_unholystrength, type: active, effect: "Immunity to bleeds, poisons and diseases and reduced physical damage taken for 8 seconds.", tags: [survival, tank, pvp]}
-  - {name: Find Treasure, icon: racial_dwarf_findtreasure, type: active, effect: "Track nearby treasure chests.", tags: [leveling]}
-  - {name: Mace Specialization, icon: inv_mace_01, type: passive, effect: "Maces increase spell and ability critical strike chance by 1%.", tags: [mace]}
+  - {name: Find Treasure, icon: racial_dwarf_findtreasure, type: active, effect: "Track nearby treasure chests, with a chance to find extra items in them.", tags: [leveling]}
+  - {name: Earth Fury, icon: spell_nature_earthquake, type: passive, effect: "Critical strike damage and healing increased by 2%.", tags: [crit, healing]}
   - {name: Big Game Hunter, icon: inv_weapon_rifle_01, type: passive, effect: "Damage against Beasts increased by 5%.", tags: [beasts, leveling]}
 racials_confidence: likely
-sources: [blizz-create-hero, wowhead-combos]
+sources: [blizz-create-hero, wowhead-combos, blizz-beta-notes-1015]
